@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d3a8828d21fdebffd36d03288e1c21906ee0ab8a29eacdb64e2aa2a1bfabad0
-size 449
+{% include "base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+{% block content %}
+  <link rel="stylesheet" href="/static/css/home.css?{% now "U" %}"/>
+{% endblock %}
+<html>
+
+  <body>
+    <div id="introDiv">
+      <img src="{% static 'resources/media/images/temp.png' %}" width="300px" height="300px" class="intro rounded-circle">
+      <h1 class="intro">HKIS iGEM Blog</h1>
+      <h5 class="intro">This is a tag line</h5>
+    </div>
+  </body>
+</html>
