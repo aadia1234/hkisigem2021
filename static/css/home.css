@@ -6,6 +6,29 @@
 #introDiv {
 	position: absolute;
 	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#introSlideshow {
+  margin: auto;
+  width: 90%;
+  height: 50%;
+}
+
+.carousel-inner img {
+  margin: auto;
+  height: 90vh;
+}
+
+.carousel-caption h5, p {
+  text-align: center !important;
+  color: white;
+}
+
+.test-section {
+  padding: 3em;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
 }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 200vh;
+      overflow: hidden;
+      background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section span {
+      position: absolute;
+      bottom: -50px;
+      background: transparent;
+      border-radius: 50%;
+
+      pointer-events: none;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: animate 10s linear infinite;
+    }
+
+    section span:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: scale(0.25) translate(-70%, -70%);
+      background: radial-gradient(#fff, transparent);
+      border-radius: 50%;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-10000%);
+        opacity: 1;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <section id="base">
+    <h1>Bubbles</h1>
+  </section>
+  <div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function createBubble() {
+        const section = document.querySelector("section");
+        const createElement = document.createElement("span");
+        var size = randInt(0, 60);
+
+        createElement.style.width = 20 + size + "px";
+        createElement.style.height = 20 + size + "px";
+        createElement.style.left = randInt(0, innerWidth) + "px";
+        section.appendChild(createElement);
+
+        setTimeout(() => {
+          createElement.remove();
+        }, 10000);
+      }
+      
+
+      $(document).ready(function() {
+        $(document).scroll(function() {
+          createBubble();
+          var scollHeight = $(document).height(); 
+          var maxTranslate = 2000;
+          var translateValue = maxTranslate;
+          var translateValue =  100 + (($(document).scrollTop()*maxTranslate) / scollHeight);
+          console.log(translateValue);
+          $("section span").css("transform", "translateY("+(-translateValue)+"%)");
+        });
+      });
+
+      // setInterval(createBubble, 50);
+      // const controller = new ScrollMagic.Controller();
+      // const bubbles = document.getElementsByClassName("bubble");
+      // const bubbleSections = document.getElementsByClassName("bubble-section");
+      // const bubblesPerSection = bubbles.length/bubbleSections.length;
+      // let bubblesPos = Array();
+
+
+      // static array values
+      // for (let i = 0; i < bubbles.length; i++) {
+      //   bubblesPos.push([i*300, i*100]);
+      // }
+
+      // bubblesPos = [
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)],
+      //   [randInt(100, window.innerWidth), randInt(100, window.innerHeight)]
+      // ]
+
+      // for (let i = 0; i < bubbleSections.length; i++) {
+      //   const sectionSize = bubbleSections[i].clientHeight/2;
+      //   for (let k = 0; k < bubblesPerSection; k++) {
+      //     bubblesPos[i*bubblesPerSection+k] = [randInt(100, window.innerWidth-100), randInt(sectionSize*i+10, sectionSize*(i+1)-100)];
+      //     // console.log(bubblesPos[k][0] + ", " + bubblesPos[k][1]);
+      //   }
+      // }
+
+      // for (let i = 0; i < bubbleSections.length; i++) {
+      //   for (let k = 0; k < bubblesPerSection; k++) {
+      //     console.log(i*bubblesPerSection+k);
+      //     const pos = bubblesPos[i*bubblesPerSection+k];
+      //     const id = "bubble"+(i*bubblesPerSection+k+1);
+      //     const bubble = document.getElementById(id);
+      //     const timeline = new TimelineLite();
+      //     const flightPath = {
+      //       curviness: 50,
+      //       // autoRotate: true,
+      //       values: getAnimationValues(pos[0], pos[1], 5)
+      //     };
+      //     const scene = new ScrollMagic.Scene({
+      //       triggerElement: "#section-"+(i+1),
+      //       duration: 1000,
+      //       triggerHook: 0
+      //     })
+      //       .setTween(timeline)
+      //       .addIndicators()
+      //       .addTo(controller);
+
+      //     if (k == bubbles.length-1) {
+      //       // scene.setPin(".animation");
+      //     } 
+
+      //     bubble.style.left = (pos[0]+"px");
+      //     bubble.style.top = (pos[1]+"px");
+      //     timeline.add(
+      //       TweenLite.to(("#"+id), 10, {
+      //         bezier: flightPath,
+      //         ease: Power1.easeInOut,
+      //       }, "animation")
+      //     );
+      //   }
+      // }
+
+      // function getAnimationValues(startX, startY, loop) {
+      //   let temp = new Array();
+      //   let radius = randInt(200, 500);
+      //   for (let i = 0; i < loop; i++) {
+      //     for (let j = 0; j < 4; j++) {
+      //       let x = (j == 0 || j == 3) ? radius : -radius;
+      //       let y = radius;
+      //       temp.push({x: 0, y: y});
+      //       console.log(x + ", " + y);
+      //     }
+      //   }
+      //   return temp;
+      // }
+
+      function randInt(min, max) {
+        return Math.random() * (max-min) + min;
+      }
+    </script>
+  </div>
+</body>
+</html>
