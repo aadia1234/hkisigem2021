@@ -1,33 +1,60 @@
-var tl = new TimelineMax({onUpdate:updatePercentage});
-var tl2 = new TimelineMax();
-const controller = new ScrollMagic.Controller();
+wavify(document.querySelector('#wave1'), {
+  height: 50,
+  bones: 5,
+  amplitude: 50,
+  color: '#30cfd0',
+  speed: .25
+});
 
-tl.from('blockquote', .5, {x:200, opacity: 0});
-tl.from('span', 1, { width: 0}, "=-.5");
-tl.from('#office', 1, {x:-200, opacity: 0,ease: Power4.easeInOut}, "=-1");
-tl.from('#building', 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-.7");
+wavify(document.querySelector('#wave2'), {
+  height: 40,
+  bones: 7,
+  amplitude: 60,
+  color: '#309dd0',
+  speed: .5
+});
 
-tl2.from("#box", 1, {opacity: 0, scale: 0});
-tl2.to("#box", .5, {left: "20%", scale: 1.3, borderColor: 'white', borderWidth: 12, boxShadow: '1px 1px 0px 0px rgba(0,0,0,0.09)'})
+function createBubble() {
+  const section = document.getElementById("sea-animation");
+  const createElement = document.createElement("span");
+  var size = randInt(30, 75);
 
-const scene = new ScrollMagic.Scene({
-  triggerElement: ".sticky",
-  triggerHook: "onLeave",
-  duration: "100%"
-})
-  .setPin(".sticky")
-  .setTween(tl)
-  .addTo(controller);
+  createElement.style.width = 50 + size + "px";
+  createElement.style.height = 50 + size + "px";
+  createElement.style.left = randInt(100, innerWidth-100) + "px";
+  // createElement.style.top = "220vh";
+  createElement.style.padding = 50 + "px";
+  createElement.className = "bubble";
+  section.appendChild(createElement);
 
-const scene2 = new ScrollMagic.Scene({
-  triggerElement: "blockquote"
-})
-  .setTween(tl2)
-  .addTo(controller);
+  setInterval(() => {
+    if (didCollide(createElement, document.getElementById("wave-wrapper"))) {
+      console.log("Collision Detected!");
+      createElement.remove();
+    }
+  }, 1)
+  // setTimeout(() => {
+  //   createElement.remove();
+  // }, 10000);
+}
+
+setInterval(createBubble, 500);
+
+function didCollide(a, b) {
+  var aRect = a.getBoundingClientRect();
+  var bRect = b.getBoundingClientRect();
+
+  return !(aRect.top > (bRect.top));
+
+  // return !(
+  //     ((aRect.top + aRect.height) < (bRect.top)) ||
+  //     (aRect.top > (bRect.top + bRect.height)) ||
+  //     ((aRect.left + aRect.width) < bRect.left) ||
+  //     (aRect.left > (bRect.left + bRect.width))
+  // );
+}
 
 
-function updatePercentage() {
-  //percent.innerHTML = (tl.progress() *100 ).toFixed();
-  tl.progress();
-  console.log(tl.progress());
+function randInt(min, max) {
+  return Math.random() * (max-min) + min;
 }

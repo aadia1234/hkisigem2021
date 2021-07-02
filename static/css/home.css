@@ -11,24 +11,181 @@
 }
 
 #introSlideshow {
+  position: relative;
   margin: auto;
   width: 90%;
-  height: 50%;
+  height: 90vh;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  margin-bottom: 20vh;
 }
 
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 5vh;
+  height: 5vh;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  height: 90vh;
+  top: 100px;
+}
 .carousel-inner img {
   margin: auto;
   height: 90vh;
 }
 
-.carousel-caption h5, p {
-  text-align: center !important;
-  color: white;
+.carousel-indicators {
+  position: relative;
+  bottom: 100px;
 }
 
-.test-section {
-  padding: 3em;
-  height: 100vh;
+.carousel-indicators [data-bs-target] {
   position: relative;
-  box-sizing: border-box;
+  /* background-color: red; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  bottom: 20px;
+}
+
+.carousel-caption h1, h2 {
+  position: relative;
+  bottom: 150px;
+  text-align: center !important;
+  color: white;
+  /* font-size: large; */
+}
+
+#sea-animation {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+}
+
+#wave-wrapper {
+  position: relative;
+  padding-top: 0px;
+  display: flex;
+  height: 20vh;
+}
+
+#wave-wrapper-1 {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  opacity: 1;
+}
+
+#wave-wrapper-2 {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+#info {
+  position: relative;
+  width: 100%;
+  height: 280vh;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgb(48, 207, 208, 1) 5%, rgb(51, 8, 103, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 999; */
+}
+
+#sea-animation span {
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: bubblesAnimation 20s linear infinite;
+  z-index: 998;
+}
+
+#sea-animation span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.25) translate(-300%, -250%);
+  background: radial-gradient(#fff, transparent);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: 998;
+}
+
+#oysters {
+  position: absolute;
+  z-index: 999;
+  /* height: 50%; */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.info-anchor {
+  position: absolute;
+  width: 50vw;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.33);
+  box-shadow: 0 0 50px rgb(90, 90, 90);
+  box-shadow:inset;
+  transition: transform 2s; /* Animation */
+  padding: 100px 25px 0px 25px;
+  border-radius: 30px;
+  overflow-wrap: normal;
+  text-align: center;
+  z-index: 999;
+}
+
+.info-anchor h1 {
+  font-size: 100px;
+
+}
+
+.info-anchor p {
+  font-size: 50px;
+}
+
+.info-anchor:hover {
+  transform: scale(1.05);
+}
+
+#info-1 {
+  /* position: absolute; */
+  left: 100px;
+  top: 20vh;
+}
+
+#info-2 {
+  right: 100px;
+  top: 70vh;
+}
+
+#info-3 {
+  left: 100px;
+  top: 120vh;
+}
+
+@keyframes bubblesAnimation {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-300vh);
+    opacity: 1;
+  }
 }
