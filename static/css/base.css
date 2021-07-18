@@ -1,6 +1,7 @@
 @font-face {
 	font-family: "Bitter";
-	src: url("https://2021.igem.org/wiki/images/2/2d/T--HKIS--bitter_font.ttf") format("truetype");
+	src: url("../fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+	/* src: url("https://2021.igem.org/wiki/images/2/2d/T--HKIS--bitter_font.ttf") format("truetype"); */
 	/* src: url({{filepath:T--HKIS--bitter_font.ttf}}); */
 }
 
@@ -8,7 +9,7 @@
 /* Clear the default wiki settings */
 #sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display: none; }
 #content { padding: 0px; width: 100%; height: 100vh; margin-top: 0px; margin-left: 0px; border: none;}
-#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5, #bodyContent p {margin-bottom: 0px; font-family: 'Bitter'; }
+#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5, #bodyContent p { margin-bottom: 0px; font-family: 'Bitter'; }
 #bodyContent a[href ^="https://"], .link-https { padding-right: 0px;}
 #HQ_page p { font-size: 13px;}
 
@@ -21,6 +22,7 @@ html, body {
  	margin: 0 auto;
 	background-size: cover;
 	font-family: 'Bitter';
+	font-size: 12px;
 	top:0;
 	bottom:0;
 	left:0;
@@ -29,24 +31,32 @@ html, body {
 }
 
 #navbar {
-	/* display: inline-block; */
-	height: 150px;
+	display: inline-block;
 	width: 100%;
 	background-color: rgb(93, 124, 182);
+	padding: 1vh;
 }
 
 #navbar a {
-	font-size: 50px;
+	font-size: 2rem;
 	text-align: center;
 	width: fit-content;
+}
+
+#navbar .navbar-brand {
+	position: relative;
 }
 
 #navbar .nav-item .dropdown-toggle {
 	padding: 0 20px 0 20px !important;
 }
 
-#navbar .navbar-nav .dropdown, #navbar .navbar-brand {
-	margin: 0 20px 0 20px;
+#navbar #navbarSupportedContent {
+	position: relative;
+	margin-right: 1%;
+  width: 100%;
+	/* margin: 0 auto; */
+	/* margin: 0 5vw 0 5vw; */
 }
 
 #navbar .nav-item .dropdown-menu {
@@ -60,7 +70,7 @@ html, body {
 	margin: 0;
 	text-align: center;
 	width: 100%;
-	font-size: 40px;
+	font-size: 1.5rem;
 }
 
 #navbar .dropdown-toggle::after {
