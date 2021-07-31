@@ -1,3 +1,12 @@
+
+
+$("#arrow-down-circle").click(function() {
+  console.log("clicked");
+  $('html, body').animate({
+      scrollTop: $("#info").offset().top
+  }, 100);
+});
+
 wavify(document.querySelector('#wave1'), {
   height: 50,
   bones: 5,
@@ -17,19 +26,18 @@ wavify(document.querySelector('#wave2'), {
 function createBubble() {
   const section = document.getElementById("sea-animation");
   const createElement = document.createElement("span");
-  var size = randInt(30, 75);
+  var size = randInt(2, 6);
 
-  createElement.style.width = 50 + size + "px";
-  createElement.style.height = 50 + size + "px";
-  createElement.style.left = randInt(100, innerWidth-100) + "px";
-  // createElement.style.top = "220vh";
-  createElement.style.padding = 50 + "px";
+  createElement.style.width = size + "vh";
+  createElement.style.height = size + "vh";
+  createElement.style.left = (randInt(100, innerWidth-100)) + "px";
+  createElement.style.padding = 3 + "vh";
   createElement.className = "bubble";
   section.appendChild(createElement);
 
   setInterval(() => {
     if (didCollide(createElement, document.getElementById("wave-wrapper"))) {
-      console.log("Collision Detected!");
+      // console.log("Collision Detected!");
       createElement.remove();
     }
   }, 1)

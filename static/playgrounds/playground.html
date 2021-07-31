@@ -19,13 +19,31 @@
 
     #header h1 {
       text-align: center;
+      background:
+      /* top, transparent black, faked with gradient */ 
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        /* bottom, image */
+        url("https://2021.igem.org/wiki/images/9/95/T--HKIS--480p_test_img.jpg");
+      background-size: cover;
       width: 100%;
-      background-color: green;
-      padding: 45vh;
-      /* height: 100vh; */
-      width: 100%;
+      padding: 42.5vmin 0 42.5vmin 0;
       font-size: 10rem;
-      margin: 0;
+      margin: auto;
+      color: white;
+    }
+
+    #header::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2.5vh;
+      left: 0;
+      margin-top: -0.675%;
+      background-color: #D7B1BF;
+      z-index: 2;
     }
 
     #content-row {
@@ -34,70 +52,228 @@
       max-width: fit-content !important;
       max-height: fit-content !important;
       margin: 0 !important;
+      background-color: #eee4d1;
+    }
+
+    #sidebar-col {
+      padding: 0 !important;
+      max-width: inherit;
+      min-width: 20vw;
+      background-color: #c4dbd3;
+      z-index: 1;
     }
 
     #sidebar {
-      padding: 0 !important;
-      max-width: inherit;
-    }
-
-    #sidebar .navbar {
+      margin: auto;
+      width: 90% !important;
+      padding: 2vh 1vw 2vh 1vw;
       font-size: 2rem;
-      /* padding: 2rem !important; */
-      padding: 15vh 2rem 25vh 2rem !important;
-      height: 100vh;
+      height: fit-content;
       width: 15vw;
     }
+    
+    #sidebar .nav-link.active {
+      color: #7498d6 !important;
+      background-color: transparent;
+    }
 
+    #sidebar .nav-link {
+      color: black !important;
+    }
+
+
+    #sidebar .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 1.5%;
+      height: 4rem;
+      right: 2vw;
+      margin-top: -0.5rem;
+      background-color: #D7B1BF !important;
+      transform: scale(0, 1);
+      transition: transform 0.5s ease !important;
+    }
+
+    #sidebar .nav-link.active::after {
+      transform: scale(1, 1);
+    }
+    
+    #sidebar .nav-link:hover::after {
+      transform: scale(1, 1);
+    }
 
     #text-content {
       position: relative;
-      background-color: red;
-      padding: 0 10vh 10vh 10vh;
+      padding-right: 0;
+      margin-left: 10%;
+      margin-right: 10%;
       height: max-content;
     }
+
     #text-content h5 {
       font-size: 5rem;
-      margin-top: 10vh;
-      padding-top: 5vh;
+      margin-top: 10vh;      
+      color: #7498d6;
     }
 
     #text-content p {
       font-size: 2rem;
     }
 
+    #text-content .link {
+      color: #7498d6;
+    }
+
+    #text-content .link:hover {
+      color: #b3c9f0;
+    
+    }
+
+    #sources-div h5 {
+      font-size: 3rem;
+    }
+
+    #sources-div p {
+      font-size: 1rem;
+    }
+
     .footer {
       height: 25vh;
+      background-color: #888888;
+      color: white;
     }
   </style>
   
 </head>
-<div id="header">
-  <h1>Section Header</h1>
-</div>
+
+<nav id="navbar" class="shadow navbar sticky-top navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">HKIS iGEM 2020</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item nav-item-hover dropdown dropdown-hover">
+            <a class="nav-link" href="https://google.com">
+              Home
+            </a>
+          </li>
+          <li class="nav-item nav-item-hover dropdown dropdown-hover">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Project
+            </a>
+          </li>
+          <li class="nav-item nav-item-hover dropdown dropdown-hover">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Human Practices
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end fade-down" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="">
+                Integrated Human Practices
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Proposed Implementation
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Entrepreneurship
+              </a>
+            </ul>
+          </li>
+          <li class="nav-item nav-item-hover dropdown dropdown-hover">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Wet-Lab
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end fade-down" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="">
+                Engineering<br>Success
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Experiments
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Parts
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Improvement of an<br>Existing Part
+              </a>
+            </ul>
+          </li>
+          <li class="nav-item nav-item-hover dropdown dropdown-hover">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dry-Lab
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end fade-down" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="">
+                Modeling
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Hardware
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Parts
+              </a>
+            </ul>
+          </li>
+          <li class="nav-item nav-item-hover dropdown dropdown-hover">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Team
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end fade-down" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="">
+                Attributions
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Collaborations
+              </a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="">
+                Contribution
+              </a>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="header">
+    <h1 class="black">Section Header</h1>
+  </div>
+
 <div id="content-row" class="row">
-  <div id="sidebar" class="col">
-    <nav id="" class="navbar sticky-top navbar-light bg-light flex-column align-items-stretch p-3">
-      <nav class="nav nav-pills flex-column">
+  <div id="sidebar-col" class="col d-none">
+    <nav style="height: 100vh;" class="shadow regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+      <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+        <h1 class="bold" style="text-align: center;">Page Overview</h1>
+        <br>
         <a class="nav-link active" href="#item-1">Item 1</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1 active" href="#item-1-1">Item 1-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+          <a class="nav-link ms-5 my-0 active" href="#item-1-1">Item 1-1</a>
+          <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Item 1-2</a>
         </nav>
-        <a class="nav-link" href="#item-2">Item 2</a>
+        <a class="nav-link mb-4" href="#item-2">Item 2</a>
         <a class="nav-link" href="#item-3">Item 3</a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+          <a class="nav-link ms-5 my-0" href="#item-3-1">Item 3-1</a>
+          <a class="nav-link ms-5 my-0 mb-4" href="#item-3-2">Item 3-2</a>
         </nav>
+        <a class="nav-link" href="#sources">Sources</a>
       </nav>
     </nav>
   </div>
   <body>
   <div id="text-content" class="col">
-    <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="position" data-bs-offset="0" tabindex="0">
+    <body data-bs-spy="scroll" data-bs-target="#sidebar-col" data-bs-method="position" data-bs-offset="0" tabindex="0">
       <h5 id="item-1">Item 1</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
+        <p>Lorem ipsum <b>BOLD</b> <i><b>ITALICS</b></i> <a href="https://google.com">LINK</a> dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
           Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
           Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
         </p>
@@ -130,16 +306,85 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
           Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
           Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>    
+        </p> 
+      <div id="sources-div">
+        <h5 class="light" id="sources">Sources</h5>
+          <p class="thin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
+            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
+            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+          </p> 
+      </div>   
     </body>
   </div>
 </div>
-<!-- <div class="footer">
-  <h1>HELLO WORLD!</h1>
-</div> -->
+<div class="footer">
+  <h1>Logos</h1>
+</div>
 <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
 <script src="../js/jquery.min.js" ></script>
 <script>
+
+  const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), titleText = $("h5"), bodyText = $("p"), navText = $("#sidebar .nav-link");
+  const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
+  for (let i = 0; i < boldText.length; i++) {
+    boldText[i].style.color = "#7498d6";
+    boldText[i].classList.add("semi-bold");
+  }
+
+  for (let i = 0; i < linkText.length; i++) {    
+    linkText[i].classList.add("link");
+    linkText[i].classList.add("medium");
+  }
+
+  for (let i = 0; i < titleText.length; i++) {
+    titleText[i].style.color = "#7498d6";
+    titleText[i].classList.add("bold");
+  }
+
+  for (let i = 0; i < bodyText.length; i++) {
+    bodyText[i].style.color = "black";
+    bodyText[i].classList.add("regular");
+  }
+
+  for (let i = 0; i < navText.length; i++) {
+    navText[i].classList.add("medium");
+  }
+
+  var didCollapse = false;
+  $(".navbar-toggler").click(() => {
+      let dropdowns = navbar.find("li");
+      let menu = dropdowns.find(".dropdown-menu");
+      if (!didCollapse) {
+        dropdowns.addClass("dropdown-collapse");
+        dropdowns.removeClass("nav-item-hover dropdown-hover");
+        menu.css("position", "relative");
+      } else {
+        dropdowns.removeClass("dropdown-collapse");
+        dropdowns.addClass("nav-item-hover dropdown-hover");
+        menu.css("position", "absolute");
+      }
+      didCollapse = !didCollapse;
+    }
+  );
+
+
+  let windowLoaded = false;
+  $(window).on("load", () => { setWebsiteLayout(); windowLoaded = true; });
+  $(window).on("orientationchange", setWebsiteLayout);
+
+  function setWebsiteLayout() {
+    if ((!isPortrait() && windowLoaded) || (isPortrait() && !windowLoaded)) {
+      $("#sidebar-col").removeClass(screenSizes);
+      navbar.removeClass("navbar-expand-lg");
+      navbar.addClass("navbar-expand-xl");
+    } else {
+      $("#sidebar-col").addClass(screenSizes);
+      navbar.removeClass("navbar-expand-xl");
+      navbar.addClass("navbar-expand-lg");
+    }
+  }
+
+  function isPortrait() { return ($(window).innerHeight() > $(window).innerWidth()); }
 
   function vh(v) {
     let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -158,8 +403,7 @@
   function vmax(v) {
     return Math.max(vh(v), vw(v));
   }
-  console.log(document.getElementById("item-1").offsetTop);
-  console.log(document.getElementById("item-2").offsetTop);
-  console.log(document.getElementById("item-3").offsetTop);
+
+
 </script>
 </html>
