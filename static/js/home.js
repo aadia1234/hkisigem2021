@@ -1,4 +1,4 @@
-
+const boldText = $("b");
 
 $("#arrow-down-circle").click(function() {
   console.log("clicked");
@@ -7,7 +7,7 @@ $("#arrow-down-circle").click(function() {
   }, 100);
 });
 
-wavify(document.querySelector('#wave1'), {
+wavify($('#wave1'), {
   height: 50,
   bones: 5,
   amplitude: 50,
@@ -15,7 +15,7 @@ wavify(document.querySelector('#wave1'), {
   speed: .25
 });
 
-wavify(document.querySelector('#wave2'), {
+wavify($('#wave2'), {
   height: 40,
   bones: 7,
   amplitude: 60,
@@ -23,43 +23,35 @@ wavify(document.querySelector('#wave2'), {
   speed: .5
 });
 
-function createBubble() {
-  const section = document.getElementById("sea-animation");
-  const createElement = document.createElement("span");
-  var size = randInt(2, 6);
+setInterval(() => {
+  const span = $("<span></span>");
+  const size = randInt(2, 6);
 
-  createElement.style.width = size + "vh";
-  createElement.style.height = size + "vh";
-  createElement.style.left = (randInt(100, innerWidth-100)) + "px";
-  createElement.style.padding = 3 + "vh";
-  createElement.className = "bubble";
-  section.appendChild(createElement);
+  span.css({
+    width: size + "vh",
+    height: size + "vh",
+    left: (randInt(100, $(window).innerWidth()-100)) + "px",
+    padding: "3vh",
+    className: "bubble"
+  });
+  
+  $(span).appendTo("document.body, #sea-animation");
+  if (didCollide(span[0], $("#wave-wrapper")[0])) { span.remove(); }
 
-  setInterval(() => {
-    if (didCollide(createElement, document.getElementById("wave-wrapper"))) {
-      // console.log("Collision Detected!");
-      createElement.remove();
-    }
-  }, 1)
-  // setTimeout(() => {
-  //   createElement.remove();
-  // }, 10000);
+}, 3000);
+
+
+for (let i = 0; i < boldText.length; i++) {
+  boldText[i].style.color = "#eee4d1";
+  boldText[i].classList.add("semi-bold");
 }
 
-setInterval(createBubble, 500);
 
 function didCollide(a, b) {
   var aRect = a.getBoundingClientRect();
   var bRect = b.getBoundingClientRect();
 
   return !(aRect.top > (bRect.top));
-
-  // return !(
-  //     ((aRect.top + aRect.height) < (bRect.top)) ||
-  //     (aRect.top > (bRect.top + bRect.height)) ||
-  //     ((aRect.left + aRect.width) < bRect.left) ||
-  //     (aRect.left > (bRect.left + bRect.width))
-  // );
 }
 
 

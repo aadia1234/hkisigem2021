@@ -68,6 +68,7 @@ html, body {
 	background-size: cover;
 	font-family: "Bitter", sans-serif;
 	font-size: 1.1vh; /*  1.1vmax for mobile or 12px; */
+  /* scroll-padding-top: 10vh; */
 	top:0;
 	bottom:0;
 	left:0;
@@ -98,47 +99,41 @@ html, body {
 }
 
 #navbar .nav-item {
-	/* margin: 0 0.2vw 0 0.2vw !important; */
-  padding: 1vh;
-  width: fit-content;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  width: max-content;
   /* text-transform: uppercase; */
 }
 
 #navbar .nav-item .dropdown-menu {
   position: absolute;
-  top: 75% !important;
-	min-width: 100%;
-  max-width: fit-content;
-  right: auto;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  min-width: max-content;
+  max-width: 100%;
+  height: fit-content;
+  top: 105% !important;
+  display: block; 
+  opacity: 0;  
+  visibility: hidden; 
+  transition: 0.3s; 
+  margin-top:0;
+  padding: 0.5vh;
 }
 
 #navbar .dropdown .dropdown-item {
 	margin: 0;
 	text-align: center;
 	width: 100%;
+  height: 100%;
 	font-size: 1.5rem;
   color: #7498d6;
+  padding: 0.5vh;
 }
 
 #navbar .dropdown .dropdown-item:hover {
   color: #D7B1BF;
   background-color: transparent;
 }
-
-/* .dropdown-menu {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.dropdown-menu > li:first-child {
-  margin-top: 15px;
-}
-.dropdown-menu > li:last-child {
-  margin-bottom: 15px;
-} */
 
 #navbar .dropdown::after {
   content: "";
@@ -151,16 +146,6 @@ html, body {
   transform: scale(0, 1);
   transition: transform 0.5s ease !important;
 }
-
-/* when multiple buttons are clicked, a visual bug occurs */
-#navbar .dropdown-hover:hover .dropdown-menu {
-  display: block;
-  margin-top: 1vh;
-  transition: 0.3s; 
-  opacity: 1; 
-  visibility: visible;
-}
-
 
 #navbar .nav-item-hover:hover::after {
   transform: scale(1, 1);
@@ -184,5 +169,13 @@ html, body {
   color: white;
 }
 
-#navbar .dropdown-menu {display: block; visibility: hidden; opacity:0; transform: translateY(50px); transition:.3s ease all;}
-#navbar .dropdown-menu.show {display: block; visibility: visible; opacity:1; transform: translateY(0px); transition:.3s ease all;}
+
+#navbar .nav-item:hover .nav-link{ color: #fff;  }
+#navbar .dropdown-menu.fade-down{ top:80%; transform: translateX(-50%) rotateX(-75deg); transform-origin: 0% 0%; }
+#navbar .nav-item:hover .dropdown-menu{transition: 0.3s; opacity:1; visibility:visible; top: 100%; transform: translateX(-50%) rotateX(0deg); }
+
+.footer {
+  height: 25vh;
+  background-color: #4b4b4b;
+  color: white;
+}
