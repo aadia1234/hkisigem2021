@@ -115,7 +115,7 @@ html, body {
   display: block; 
   opacity: 0;  
   visibility: hidden; 
-  transition: 0.3s; 
+  transition: 0.5s; 
   margin-top:0;
   padding: 0.5vh;
 }
@@ -172,7 +172,7 @@ html, body {
 
 #navbar .nav-item:hover .nav-link{ color: #fff;  }
 #navbar .dropdown-menu.fade-down{ top:80%; transform: translateX(-50%) rotateX(-75deg); transform-origin: 0% 0%; }
-#navbar .nav-item:hover .dropdown-menu{transition: 0.3s; opacity:1; visibility:visible; top: 100%; transform: translateX(-50%) rotateX(0deg); }
+#navbar .nav-item:hover .dropdown-menu{transition: 0.5s; opacity:1; visibility:visible; top: 100%; transform: translateX(-50%) rotateX(0deg); }
 
 .footer {
   height: 25vh;
