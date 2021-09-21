@@ -1,0 +1,181 @@
+@font-face {
+	font-family: "Bitter";
+	src: url("../fonts/Bitter/Bitter-VariableFont_wght.ttf") format("truetype");
+	/* src: url("https://2021.igem.org/wiki/images/2/2d/T--HKIS--bitter_font.ttf") format("truetype"); */
+	/* src: url({{filepath:T--HKIS--bitter_font.ttf}}); */
+}
+
+/***************************************************** DEFAULT WIKI SETTINGS  *********************************************/
+/* Clear the default wiki settings */
+#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display: none; }
+#content { padding: 0; width: 100%; height: 100vh; margin-top: 0; margin-left: 0; border: none;}
+#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5, #bodyContent p { margin-bottom: 0; font-family: "Bitter"; }
+#bodyContent a[href ^="https://"], .link-https { padding-right: 0;}
+/* #HQ_page p { font-size: 13px;} */
+
+/* Bitter */
+.thin {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 100;
+}
+
+.extra-light {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 200;
+}
+
+.light {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 300;
+}
+
+.regular {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 400;
+}
+
+.medium {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 500;
+}
+
+.semi-bold {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 600;
+}
+
+.bold {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 700;
+}
+
+.extra-bold {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 800;
+}
+
+.black {
+  font-family: "Bitter";
+  font-variation-settings: "wght" 900;
+}
+
+html, body {
+	background-color: #d9efff; 
+	width: 100%; 
+	position: relative;
+	padding: 0;
+ 	margin: 0 auto;
+	background-size: cover;
+	font-family: "Bitter", sans-serif;
+	font-size: 1.1vh; /*  1.1vmax for mobile or 12px; */
+  /* scroll-padding-top: 10vh; */
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index: 1;
+}
+
+#navbar {
+	width: 100%;
+	background-color: #7498d6;
+  height: 5vh;
+}
+
+#navbar a {
+	font-size: 2rem;
+	text-align: center;
+	width: fit-content;
+}
+
+#navbar .navbar-brand {
+  margin-left: 5vw;
+  margin-right: 2vw;
+}
+
+#navbar #navbarSupportedContent {
+  position: absolute;
+	right: 2.5vw;
+}
+
+#navbar .nav-item {
+  padding-left: 1vh;
+  padding-right: 1vh;
+  width: max-content;
+  /* text-transform: uppercase; */
+}
+
+#navbar .nav-item .dropdown-menu {
+  position: absolute;
+  left: 50%;
+  min-width: max-content;
+  max-width: 100%;
+  height: fit-content;
+  top: 105% !important;
+  display: block; 
+  opacity: 0;  
+  visibility: hidden; 
+  transition: 0.5s; 
+  margin-top:0;
+  padding: 0.5vh;
+}
+
+#navbar .dropdown .dropdown-item {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+  height: 100%;
+	font-size: 1.5rem;
+  color: #7498d6;
+  padding: 0.5vh;
+}
+
+#navbar .dropdown .dropdown-item:hover {
+  color: #D7B1BF;
+  background-color: transparent;
+}
+
+#navbar .dropdown::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2vh;
+  left: 0;
+  margin-bottom: 0.25vh;
+  background-color: #D7B1BF;
+  transform: scale(0, 1);
+  transition: transform 0.5s ease !important;
+}
+
+#navbar .nav-item-hover:hover::after {
+  transform: scale(1, 1);
+}
+
+/* Navbar (collapsed)*/
+#navbar .collapse.show, #navbar .collapsing {
+  background-color: #7498d6;
+  width: 100%;
+  left: 0;
+  padding-left: 4.8vw;
+  top: 5vh;
+}
+
+#navbar .dropdown-collapse .dropdown-menu {
+  background-color: #7498d6;
+  border: none;
+}
+
+#navbar .dropdown-collapse .dropdown-menu .dropdown-item {
+  color: white;
+}
+
+
+#navbar .nav-item:hover .nav-link{ color: #fff;  }
+#navbar .dropdown-menu.fade-down{ top:80%; transform: translateX(-50%) rotateX(-75deg); transform-origin: 0% 0%; }
+#navbar .nav-item:hover .dropdown-menu{transition: 0.5s; opacity:1; visibility:visible; top: 100%; transform: translateX(-50%) rotateX(0deg); }
+
+.footer {
+  height: 25vh;
+  background-color: #4b4b4b;
+  color: white;
+}

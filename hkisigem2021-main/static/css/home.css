@@ -1,0 +1,196 @@
+
+#introSlideshow {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  margin-top: 5vh;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  height: fit-content;
+  width: 5vw;
+  margin: auto;
+  z-index: 999;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  padding: 2vh;
+}
+
+.carousel-inner {
+  z-index: 999;
+  background-color: #d9efff;
+
+}
+.carousel-inner img {
+  margin: auto;
+  height: 70vh;
+}
+
+.rounded-3 {
+  border-radius: 2.5vh !important;
+}
+
+.carousel-indicators {
+  position: relative;
+  bottom: 5vh;
+  z-index: 999;
+}
+
+.carousel-indicators [data-bs-target] {
+  position: relative;
+  /* background-color: red; */
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  bottom: 1vh;
+}
+
+#arrow-down {
+  position: relative;
+  display: block;
+  margin: auto;
+  top: 5%;
+  width: 5%;
+  height: 5%;
+  z-index: 999;
+}
+
+#arrow-down-circle {
+  position: absolute;
+  display: block;
+  color: transparent;
+}
+
+#arrow-down-circle:hover {
+  cursor: pointer;
+}
+
+#sea-animation {
+  position: relative;
+  width: 100%;
+  height: 475vh;
+}
+
+#wave-wrapper {
+  position: relative;
+  padding-top: 0;
+  display: flex;
+  height: 20vh;
+}
+
+#wave-wrapper-1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 1;
+}
+
+#wave-wrapper-2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+#info {
+  position: relative;
+  width: 100%;
+  height: 95%;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgb(48, 207, 208, 1) 5%, rgb(51, 8, 103, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sea-animation span {
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset 0 0 1vh rgba(255, 255, 255, 0.125);
+  animation: bubblesAnimation 45s linear infinite;
+  z-index: 998;
+}
+
+#sea-animation span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.25) translate(-300%, -250%);
+  background: radial-gradient(rgb(255, 255, 255, 0.125), transparent);
+  border-radius: 50%;
+  z-index: 998;
+}
+
+#sea-background {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  bottom: 0vh;
+  left: 0;
+}
+
+.info-anchor {
+  position: absolute;
+  width: 40vw;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.33);
+  padding: 10vh 4vh 4vh 4vh;
+  border-radius: 3vh;
+  overflow-wrap: normal;
+  text-align: center;
+  z-index: 999;
+}
+
+.info-anchor h1 {
+  font-size: 4.5rem;
+  margin-top: -4.5vh;
+  margin-bottom: 4.5vh;
+}
+
+.info-anchor p {
+  font-size: 2rem;
+}
+
+#info-1 {
+  left: 6vw;
+  top: 20vh;
+}
+
+#info-2 {
+  right: 6vw;
+  top: 100vh;
+}
+
+#info-3 {
+  left: 6vw;
+  top: 180vh;
+}
+
+#info-4 {
+  right: 6vw;
+  top: 260vh;
+}
+
+@keyframes bubblesAnimation {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-460vh);
+    opacity: 1;
+  }
+}
