@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+    "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
+    https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
+  -->
+  <link type=text/css rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link type=text/css rel="stylesheet" href="../static/css/base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+
+    #header h1 {
+      text-align: center;
+      background:
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://2021.igem.org/wiki/images/9/95/T--HKIS--480p_test_img.jpg");
+      background-size: cover;
+      width: 100%;
+      padding: 42.5vmin 0 42.5vmin 0;
+      font-size: 10rem;
+      margin: auto;
+      color: white;
+    }
+
+    #header::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2.5vh;
+      left: 0;
+      margin-top: -0.675%;
+      background-color: #D7B1BF;
+      z-index: 2;
+    }
+
+    #content-row {
+      min-width: fit-content !important;
+      min-height: fit-content !important;
+      max-width: fit-content !important;
+      max-height: fit-content !important;
+      margin: 0 !important;
+      background-color: #eee4d1;
+    }
+
+    #sidebar-col {
+      padding: 0 !important;
+      max-width: inherit;
+      min-width: 20vw;
+      background-color: #c4dbd3;
+      z-index: 1;
+    }
+
+    #sidebar {
+      margin: auto;
+      width: 90% !important;
+      padding: 2vh 1vw 2vh 1vw;
+      font-size: 2rem;
+      height: fit-content;
+      width: 15vw;
+    }
+    
+    #sidebar .nav-link.active {
+      color: #7498d6 !important;
+      background-color: transparent;
+    }
+
+    #sidebar .nav-link {
+      color: black !important;
+    }
+
+
+    #sidebar .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 1.5%;
+      height: 4rem;
+      right: 2vw;
+      margin-top: -0.5rem;
+      background-color: #D7B1BF !important;
+      transform: scale(0, 1);
+      transition: transform 0.5s ease !important;
+    }
+
+    #sidebar .nav-link.active::after {
+      transform: scale(1, 1);
+    }
+    
+    #sidebar .nav-link:hover::after {
+      transform: scale(1, 1);
+    }
+
+    #text-content {
+      position: relative;
+      padding-right: 0;
+      margin-left: 10%;
+      margin-right: 10%;
+      height: max-content;
+    }
+
+    #text-content h5 {
+      font-size: 5rem;
+      padding-top: 10vh;
+      color: #7498d6;
+    }
+
+    #text-content p {
+      font-size: 2rem;
+      padding-bottom: 2.5vh;
+    }
+
+    #text-content .link {
+      color: #7498d6;
+    }
+
+    #text-content .link:hover {
+      color: #b3c9f0;
+    
+    }
+
+    #sources-div h5 {
+      font-size: 3rem;
+    }
+
+    #sources-div p {
+      font-size: 1rem;
+    }
+  </style>
+  
+</head>
+
+<!-- {{ HKIS/base.html }} -->
+<nav id="navbar" class="shadow navbar sticky-top navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">HKIS iGEM 2020</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="https://google.com">
+            Home
+          </a>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="https://2021.igem.org/Team:HKIS/Description" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+        </li>
+
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Human_Practices">
+              Integrated Human Practices
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Implementation">
+              Proposed Implementation
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Entrepreneurship">
+              Entrepreneurship
+            </a>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Wet-Lab
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Engineering">
+              Engineering<br>Success
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Experiments">
+              Experiments
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Parts">
+              Parts
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Improvement_of_an_Existing_Part">
+              Improvement of an<br>Existing Part
+            </a>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dry-Lab
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Model">
+              Modeling
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Model">
+              Hardware
+            </a>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Attributions">
+              Attributions
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Collaborations">
+              Collaborations
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Contribution">
+              Contribution
+            </a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="header">
+  <h1 class="black">Implementation</h1>
+</div>
+
+<div id="content-row" class="row">
+  <div id="sidebar-col" class="col d-none shadow-sm">
+    <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+      <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+        <h1 class="bold" style="text-align: center;">Page Overview</h1>
+        <br>
+        <a class="nav-link mb-4" href="#item-1">Introduction</a>
+        <a class="nav-link mb-4" href="#item-2">How it works</a>
+        <a class="nav-link mb-4" href="#item-3">Application</a>
+        <a class="nav-link mb-4" href="#item-4">Certifications</a>
+        <a class="nav-link mb-4" href="#sources">Sources</a>
+      </nav>
+    </nav>
+  </div>
+  <!-- <body> -->
+  <div id="text-content" class="col">
+    <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="0" tabindex="0">
+      <div style = "width: 40vw; height: 40vh; background-color: aqua; margin-top: 12.5vh;" ></div>
+      <h5 id="item-1">Introduction</h5>
+      <br><br>
+        <p>In order to combat the issue of accessibility in the oyster industry, we decided to develop a more affordable testing kit based on recombinase polymerase amplification (RPA). Our goal was to develop a kit that was faster and also easy to use without extensive technical experience. 
+          <br><br>
+          While our kit has a large variety of possible users, we hope that it will be most useful to small-scale fishermen in the greater Hong Kong area. Oyster farming in Hong Kong is high-risk to contamination by Vibrio. Our detection kit would allow fishermen to detect the presence of such bacteria efficiently and at a reasonable price. 
+          <br><br>
+          The secondary need our product attempts to fulfill is the large-scale consumer’s inability to detect oyster contamination themselves. Large scale consumers include restaurants and whole foods markets that source from large aquacultures. The most cost-effective way for our product to be used is to detect a single sample out of large batches of oysters, which is to say the average family is not our target consumer.
+          <br><br>
+          Our product could also be used by other fisheries and shellfish industries. The issue of contamination is not unique to raw oysters, so this product has great potential for expansion. We hope that our product could serve as an easy-to-use, simple, and straightforward method for end-users to test for contamination in seafood. 
+        </p>
+      <h5 id="item-2">How does our product work? </h5>
+      <br><br>
+        <p>Our product works by using a dipstick DNA swap, the user swabs the oyster sample on the inside of the shell, and </p>      
+
+        <div style = "width: 30vw; height: 90vh; background-color: aqua" >
+        
+        </div>
+      <h5 id="item-3">Kit Applications & Concept Application:</h5>
+      <br><br>
+        <p>Our kit is designed for contamination screening purposes. (Put Proof of Concept Page Link Here) For each of our end user groups, we anticipate some very specific circumstances in which our product will be used, but one of the great aspects of our kit is its flexibility in application. 
+          <br><br>
+          Our kit is marketed for oysters. As the local issue we are confronting is the dying local oyster farming industry. However, our kit has applications for all kinds of seafood. Though our target demographics are seafood restaurants, oyster retail stores, and oyster farmers, we anticipate our product being used for all sorts of testing. For example, scientists can conduct on-site screening for Vibrio pathogens with our kit if their purpose is to acquire contamination sample data, and oyster retail stores and oyster farmers can use our kit to screen batches of produce by strategically sampling specific products of a batch, as our kit is incredibly cheap screening should not affect pricing too much.
+          <br><br>
+          Another application of our product is its versatility in application for all kinds of seafood. Though the immediate problem we are trying to solve is the contamination of local oysters, we have kept in mind the scope of the seafood industry, and have designed our kit to be used for Vibrio screening in all seafoods. However, the concept behind our kit is much greater than simply screening applications across seafood varieties. Our kit concept can actually be modified easily to screen anything. This includes Viruses and other Bacteria. The reason for this convenient modification lies in the amplification technology we have employed, and the major privilege that accompanies this type of amplification.
+          <br><br>
+          As documented in the Description Page (HyperLINK THIS), our gRNA design is without a PAM site. The PAM site is a short codon segment of a 
+          
+        </p>      
+        <h5 id="item-4">Premarket Certifications:</h5>
+        <br><br>
+        <p>Premarket certifications are one of the most important steps for manufacturing and designing point-of-care tests. With the rise of the COVID pandemic, global biotech enterprises quickly swapped their focus on improving or designing new point-of-care (POC) detection tests. As a result, regulatory bodies, such as the FDA, refined their regulations on detection device premarket approvals. As there was a surge of novel devices and unique applications of technology appearing in the POC industry, regulatory bodies ensured that only the devices guaranteed with high enough accuracy could be marketed.
+          <br><br>
+          Despite the standards being raised, the method for acquiring premarket approval has largely remained the same, with the company in question submitting large quantities of data and screening results to the FDA for approval. 
+          <br><br>
+          After conducting extensive research, our team has concluded that when our detection kit has reached its final stages of development, premarket approval will likely not be required, as POC devices belong to PMA Class I or II. Class I and II devices are devices that generally will not directly cause harm if used improperly. Where machines like implantable pacemakers are classified as Class III due to the scope of harm that could be caused in the event of a malfunction, POC screening tools will only cause as much harm as the substrate it is screening for.
+          <br><br>
+          Although Class I and II devices do not require PMA, some Class I and most Class II devices are still required to complete the 510(k) requirements. According to the FDA, 510(k) premarket submissions are “based on the concept of substantial equivalence (SE) to a legally marketed device, also referred to as a predicate.” Due to the lack of an established industry for Vibrio screening devices, we were unable to find products that were very similar. Our method of searching was primarily through checking FDA PMA or 510(k) submission databases for any device titles with Vibrio in their name, as well as other closely related keywords. We were unable to find anything within the databases. Given the circumstance, there are two routes that can be taken to determine the closest predicate outside of Vibrio-screening POC devices, that is, any other devices that are used to perform Vibrio detection, or other POC devices used to screen for other species of bacteria. 
+          <br><br>
+          However, some Class II devices are automatically exempt from 510(k) requirements: if they have received a formal review and have been specifically exempted if they belong to a class of devices called preamendment devices. Preamendment devices are devices produced before May 28, 1976. Or if they belong to specific classes of devices that have been exempted. After reviewing similar LFA-POC devices, such as the Optium Point-Of-Care Blood Glucose Test Strips, we have concluded that our device very well may require a 510(k) submission, as the Blood Glucose Test Strips product is classified as PMA Class II, and was not exempted from a 510(k). Seeing as how our device handles a reagent significantly more hazardous than blood, we anticipate a 510(k) submission will be required.
+          <br><br>
+          In conclusion, a PMA will not be required, but a 510(k) must be submitted, and the data submitted will likely have to be comparable to that of other similar LFA–POC devices used in the detection of other pathogenic bacteria.
+          </p>
+      
+      
+        <div id="sources-div">
+        <h5 class="light" id="sources">Sources:</h5>
+          <p class="thin">
+            <a>https://www.marketsandmarkets.com/Market-Reports/point-of-care-diagnostic-market-106829185.html?gclid=CjwKCAjwt8uGBhBAEiwAayu_9e2RE3jUPRWyYnPpmPs2wAD8KFm2tFYlvpvB5xlmIC8Cr5Fij_WwdRoC60cQAvD_BwE</a>
+            <br><br>
+            <a>https://www.fda.gov/medical-devices/premarket-submissions/premarket-approval-pma</a>
+            <br><br>
+            <a>https://labtestsonline.org/articles/commercial-tests-fda-approval</a>
+            <br><br>
+            <a>https://www.fda.gov/medical-devices/consumers-medical-devices/learn-if-medical-device-has-been-cleared-fda-marketing</a>
+            <br><br>
+            <a>https://jamanetwork.com/journals/jama/fullarticle/1817798</a>
+            
+            
+          </p> 
+      </div>   
+    </body>
+  </div>
+</div>
+
+<!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+<footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <h1>Special Thanks to Our Sponsors!</h1>
+    <!-- Section: Images -->
+    <section class="">
+      <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+            style="width: 10.5vmax;"
+          >
+            <img
+              src="../static/media/images/new-england-biolabs.svg"
+              class="img-fluid w-100 shadow bg-white rounded"
+              alt="New England Biolabs"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+            style="width: 19vmax;"
+          >
+            <img
+              src="../static/media/images/twist.svg"
+              class="img-fluid w-100 shadow bg-white rounded"
+              alt="Twist Bioscience"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+            style="width: 9.33vmax;"
+          >
+            <img
+              src="../static/media/images/rtc.svg"
+              class="img-fluid w-100 shadow bg-white rounded"
+              alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Images -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <h3>Contact Us</h3>
+      <h4>igem.hshk@gmail.com</h3>
+    </section>
+    <!-- Section: Form -->
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+<script src="../static/js/jquery.min.js" ></script>
+<script>
+
+  const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), titleText = $("h5"), bodyText = $("p"), navText = $("#sidebar .nav-link");
+  const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
+  for (let i = 0; i < boldText.length; i++) {
+    boldText[i].style.color = "#7498d6";
+    boldText[i].classList.add("semi-bold");
+  }
+
+  for (let i = 0; i < linkText.length; i++) {    
+    linkText[i].classList.add("link");
+    linkText[i].classList.add("medium");
+  }
+
+  for (let i = 0; i < titleText.length; i++) {
+    titleText[i].style.color = "#7498d6";
+    titleText[i].classList.add("bold");
+  }
+
+  for (let i = 0; i < bodyText.length; i++) {
+    bodyText[i].style.color = "black";
+    bodyText[i].classList.add("regular");
+  }
+
+  for (let i = 0; i < navText.length; i++) {
+    navText[i].classList.add("medium");
+  }
+
+  var didCollapse = false;
+  $(".navbar-toggler").click(() => {
+      let dropdowns = navbar.find("li");
+      let menu = dropdowns.find(".dropdown-menu");
+      if (!didCollapse) {
+        dropdowns.addClass("dropdown-collapse");
+        dropdowns.removeClass("nav-item-hover dropdown-hover");
+        menu.removeClass("dropdown-menu-end fade-down show");
+        menu.css("position", "relative");
+      } else {
+        dropdowns.removeClass("dropdown-collapse");
+        setTimeout(() => {menu.addClass("dropdown-menu-end fade-down show");}, 250);
+        menu.css("position", "absolute");
+      }
+      didCollapse = !didCollapse;
+    }
+  );
+
+
+  // try $(document).ready()
+  let windowLoaded = false;
+  $(window).on("load", () => { setWebsiteLayout(); windowLoaded = true; });
+  $(window).on("orientationchange", setWebsiteLayout);
+
+  function setWebsiteLayout() {
+    if ((!isPortrait() && windowLoaded) || (isPortrait() && !windowLoaded)) {
+      $("#sidebar-col").removeClass(screenSizes);
+      navbar.removeClass("navbar-expand-lg");
+      navbar.addClass("navbar-expand-xl");
+    } else {
+      $("#sidebar-col").addClass(screenSizes);
+      navbar.removeClass("navbar-expand-xl");
+      navbar.addClass("navbar-expand-lg");
+    }
+  }
+
+  function isPortrait() { return ($(window).innerHeight() > $(window).innerWidth()); }
+
+  function vh(v) {
+    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    return (v * h) / 100;
+  }
+
+  function vw(v) {
+    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    return (v * w) / 100;
+  }
+
+  function vmin(v) {
+    return Math.min(vh(v), vw(v));
+  }
+
+  function vmax(v) {
+    return Math.max(vh(v), vw(v));
+  }
+</script>
+</html>
