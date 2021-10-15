@@ -68,7 +68,7 @@ html, body {
  	margin: 0 !important;
 	background-size: cover;
 	font-family: "Bitter", sans-serif;
-	font-size: 1.1vh !important; /*  1.1vmax for mobile or 12px; */
+	font-size: 1.1vmin !important; /*  1.1vmax for mobile or 12px; */
   /* scroll-padding-top: 10vh; */
 	top:0;
 	bottom:0;
@@ -110,8 +110,8 @@ html, body {
 #navbar .nav-item .dropdown-menu {
   position: absolute;
   left: 50%;
-  min-width: max-content;
-  max-width: 100%;
+  min-width: 120%;
+  max-width: 150%;
   height: fit-content;
   top: 105% !important;
   display: block; 
