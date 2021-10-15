@@ -2,8 +2,8 @@
 #introSlideshow {
   position: relative;
   margin: 5vh auto 5vh auto;
-  width: 90%;
-  height: 70vh;
+  width: 60%;
+  /* height: 70%; */
   background-color: #d9efff !important;
 }
 

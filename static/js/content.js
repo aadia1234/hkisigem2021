@@ -1,28 +1,33 @@
-const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), titleText = $("h5"), bodyText = $("p"), navText = $("#sidebar .nav-link");
+const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), headerText = $("h2"), subHeaderText = $("h3"), bodyText = $("p"), navText = $("#sidebar .nav-link");
 const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
 
-for (let i = 0; i < boldText.length; i++) {
-  boldText[i].style.color = "#7498d6";
-  boldText[i].classList.add("semi-bold");
+for (let t of boldText) {
+  t.style.color = "#7498d6";
+  t.classList.add("semi-bold");
 }
 
-for (let i = 0; i < linkText.length; i++) {    
-  linkText[i].classList.add("link");
-  linkText[i].classList.add("medium");
+for (let t of linkText) {    
+  t.classList.add("link");
+  t.classList.add("medium");
 }
 
-for (let i = 0; i < titleText.length; i++) {
-  titleText[i].style.color = "#7498d6";
-  titleText[i].classList.add("bold");
+for (let t of headerText) {
+  t.style.color = "#7498d6";
+  t.classList.add("bold");
 }
 
-for (let i = 0; i < bodyText.length; i++) {
-  bodyText[i].style.color = "black";
-  bodyText[i].classList.add("regular");
+for (let t of subHeaderText) {
+  t.style.color = "#7498d6";
+  t.classList.add("semi-bold");
 }
 
-for (let i = 0; i < navText.length; i++) {
-  navText[i].classList.add("medium");
+for (let t of bodyText) {
+  t.style.color = "black";
+  t.classList.add("regular");
+}
+
+for (let t of navText) {
+  t.classList.add("medium");
 }
 
 // var didCollapse = false;

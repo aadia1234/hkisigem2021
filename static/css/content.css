@@ -94,8 +94,15 @@
   height: max-content;
 }
 
-#text-content h5 {
+#text-content h2 {
   font-size: 5rem;
+  padding-top: 10vh !important;
+  color: #7498d6 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#text-content h3 {
+  font-size: 3.5rem;
   padding-top: 10vh !important;
   color: #7498d6 !important;
   margin-bottom: 0.5rem !important;
@@ -113,10 +120,6 @@
 #text-content .link:hover {
   color: #b3c9f0;
 
-}
-
-#sources-div h5 {
-  font-size: 3rem;
 }
 
 #sources-div p {
