@@ -10,7 +10,7 @@
       "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
       https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
     -->
-    <link type=text/css rel="stylesheet" href="../..//static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/bootstrap.min.css">
     <link type=text/css rel="stylesheet" href="../../static/css/base.css">
     <link type=text/css rel="stylesheet" href="../../static/css/content.css">
     <!-- <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
@@ -19,9 +19,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
   </head>
-
+  <style>
+  #header h1 {
+  text-align: center !important;
+  background:
+      linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../../static/media/images/Entrepreneurship.jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 42.5vmin 0 42.5vmin 0 !important;
+  font-size: 10rem;
+  margin-top: -5vh;
+  color: white !important;
+}
+  </style>
   <div id="header">
-    <h1 class="black">Entrepreneurship</h1>
+    <h1 class="black")>Entrepreneurship</h1>
   </div>
 
   <style type="text/css">
@@ -361,5 +377,5 @@
   <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
   <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
   <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
-  <script type="text/javascript" src="../static/js/content.js"></script>
+  <script type="text/javascript" src="../../static/js/content.js"></script>
 </html>
