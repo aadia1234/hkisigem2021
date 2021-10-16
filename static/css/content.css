@@ -1,0 +1,131 @@
+#header h1 {
+  text-align: center !important;
+  background:
+      linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://2021.igem.org/wiki/images/9/95/T--HKIS--480p_test_img.jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 42.5vmin 0 42.5vmin 0 !important;
+  font-size: 10rem;
+  margin-top: -5vh;
+  color: white !important;
+}
+
+#header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5vh;
+  left: 0;
+  margin-top: -0.675%;
+  background-color: #D7B1BF;
+  z-index: 2;
+}
+
+#content-row {
+  min-width: fit-content !important;
+  min-height: fit-content !important;
+  max-width: fit-content !important;
+  max-height: fit-content !important;
+  margin: 0 !important;
+  background-color: transparent;
+  /* background-color: #eee4d1; */
+}
+
+#sidebar-col {
+  padding: 0 !important;
+  max-width: inherit;
+  min-width: 20vw;
+  background-color: #c4dbd3;
+  z-index: 1;
+}
+
+#sidebar {
+  margin: auto;
+  width: 90% !important;
+  padding: 2vh 1vw 2vh 1vw;
+  font-size: 2rem;
+  height: fit-content;
+  width: 15vw;
+}
+
+#sidebar a {
+  text-decoration: none !important;
+}
+
+#sidebar .nav-link.active {
+  color: #7498d6 !important;
+  background-color: transparent;
+}
+
+#sidebar .nav-link {
+  color: black !important;
+}
+
+
+#sidebar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 1.5%;
+  height: 4rem;
+  right: 2vw;
+  margin-top: -0.5rem;
+  background-color: #D7B1BF !important;
+  transform: scale(0, 1);
+  transition: transform 0.5s ease !important;
+}
+
+#sidebar .nav-link.active::after {
+  transform: scale(1, 1);
+}
+
+#sidebar .nav-link:hover::after {
+  transform: scale(1, 1);
+}
+
+#text-content {
+  position: relative;
+  padding-right: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: max-content;
+}
+
+#text-content h2 {
+  font-size: 5rem;
+  padding-top: 10vh !important;
+  color: #7498d6 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#text-content h3 {
+  font-size: 3.5rem;
+  padding-top: 10vh !important;
+  color: #7498d6 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#text-content p {
+  font-size: 2rem;
+  padding-bottom: 2.5vh !important;
+}
+
+#text-content .link {
+  color: #7498d6;
+}
+
+#text-content .link:hover {
+  color: #b3c9f0;
+
+}
+
+#sources-div p {
+  font-size: 1rem;
+}
+
+footer h3, h4 {
+  margin-bottom: 0.5rem !important;
+}
