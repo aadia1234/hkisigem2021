@@ -94,7 +94,7 @@
   height: max-content;
 }
 
-#text-content h2, h3, h4 {
+#text-content h2, h3:not(.contact), h4:not(.contact) {
   font-size: 5rem;
   padding-top: 10vh !important;
   color: #7498d6 !important;

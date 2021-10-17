@@ -1,4 +1,4 @@
-const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), headerText = $("h2"), subHeaderText = $("h3"), subSubHeaderText = $("h4"), bodyText = $("p"), navText = $("#sidebar .nav-link");
+const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), headerText = $("h2"), subHeaderText = $("h3:not(.contact)"), subSubHeaderText = $("h4:not(.contact)"), bodyText = $("p"), navText = $("#sidebar .nav-link");
 const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
 
 for (let t of boldText) {
