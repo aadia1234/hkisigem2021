@@ -1,7 +1,6 @@
 const boldText = $("b");
 
 $("#arrow-down-circle").click(function() {
-  console.log("clicked");
   $('html, body').animate({
       scrollTop: $("#info").offset().top
   }, 100);

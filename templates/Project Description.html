@@ -1,142 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 
-    Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
-    "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
-    https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
-  -->
-  <link type=text/css rel="stylesheet" href="../static/css/bootstrap.min.css">
-  <link type=text/css rel="stylesheet" href="../static/css/base.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <style>
+<!-- {{ HKIS/base.html }} -->
 
-    #header h1 {
-      text-align: center;
-      background:
-          linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0, 0, 0, 0.5)
-        ),
-        url("https://2021.igem.org/wiki/images/9/95/T--HKIS--480p_test_img.jpg");
-      background-size: cover;
-      width: 100%;
-      padding: 42.5vmin 0 42.5vmin 0;
-      font-size: 10rem;
-      margin: auto;
-      color: white;
-    }
-
-    #header::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2.5vh;
-      left: 0;
-      margin-top: -0.675%;
-      background-color: #D7B1BF;
-      z-index: 2;
-    }
-
-    #content-row {
-      min-width: fit-content !important;
-      min-height: fit-content !important;
-      max-width: fit-content !important;
-      max-height: fit-content !important;
-      margin: 0 !important;
-      background-color: #eee4d1;
-    }
-
-    #sidebar-col {
-      padding: 0 !important;
-      max-width: inherit;
-      min-width: 20vw;
-      background-color: #c4dbd3;
-      z-index: 1;
-    }
-
-    #sidebar {
-      margin: auto;
-      width: 90% !important;
-      padding: 2vh 1vw 2vh 1vw;
-      font-size: 2rem;
-      height: fit-content;
-      width: 15vw;
-    }
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+      "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
+      https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
+    -->
+    <link type=text/css rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../static/css/base.css">
+    <link type=text/css rel="stylesheet" href="../static/css/content.css">
+    <!-- <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/content.css&action=raw&ctype=text/css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    #sidebar .nav-link.active {
-      color: #7498d6 !important;
-      background-color: transparent;
-    }
-
-    #sidebar .nav-link {
-      color: black !important;
-    }
-
-
-    #sidebar .nav-link::after {
-      content: "";
-      position: absolute;
-      width: 1.5%;
-      height: 4rem;
-      right: 2vw;
-      margin-top: -0.5rem;
-      background-color: #D7B1BF !important;
-      transform: scale(0, 1);
-      transition: transform 0.5s ease !important;
-    }
-
-    #sidebar .nav-link.active::after {
-      transform: scale(1, 1);
-    }
-    
-    #sidebar .nav-link:hover::after {
-      transform: scale(1, 1);
-    }
-
-    #text-content {
-      position: relative;
-      padding-right: 0;
-      margin-left: 10%;
-      margin-right: 10%;
-      height: max-content;
-    }
-
-    #text-content h5 {
-      font-size: 5rem;
-      padding-top: 10vh;
-      color: #7498d6;
-    }
-
-    #text-content p {
-      font-size: 2rem;
-      padding-bottom: 2.5vh;
-    }
-
-    #text-content .link {
-      color: #7498d6;
-    }
-
-    #text-content .link:hover {
-      color: #b3c9f0;
-    
-    }
-
-    #sources-div h5 {
-      font-size: 3rem;
-    }
-
-    #sources-div p {
-      font-size: 1rem;
-    }
-  </style>
-  
-</head>
-
+  </head>
 <!-- {{ HKIS/base.html }} -->
 <nav id="navbar" class="shadow navbar sticky-top navbar-expand-lg navbar-dark">
   <div class="container-fluid">
@@ -233,239 +115,177 @@
     </div>
   </div>
 </nav>
-<div id="header">
-  <h1 class="black">What is our project?</h1>
-  
-</div>
+  <div id ="header">
+  <img src= "C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--PD_HD.JPG">
+    <h1 class="black">Project Description</h1>
+  </div>
 
-<div id="content-row" class="row">
-  <div id="sidebar-col" class="col d-none shadow-sm">
-    <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
-      <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
-        <h1 class="bold" style="text-align: center;">Page Overview</h1>
-        <br>
-        <a class="nav-link mb-4" href="#item-1">The Problem</a>
-        <a class="nav-link mb-4" href="#item-2">Our Response</a>
-        <a class="nav-link" href="#sources">Sources</a>
+  <div id="content-row" class="row">
+    <!-- class += d-none -->
+    <div id="sidebar-col" class="col shadow-sm">
+      <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+        <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+          <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
+          <br>
+          <a class="nav-link active" href="#item-1">Background</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0 " href="#item-1-1">Historical Context</a>
+          </nav>
+          <a class="nav-link " href="#item-2">Detection</a>
+          <a class="nav-link" href="#item-3">Purification</a>
+          <a class="nav-link" href="#sources">Sources</a>
+        </nav>
       </nav>
-    </nav>
-  </div>
-  <!-- <body> -->
-  <div id="text-content" class="col">
-    <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="0" tabindex="0">
-      <h5 id="item-1">What is the problem?</h5>
-      <br><br>
-      <p>Hong Kong has had a thriving oyster industry for 700 years. 
-        The presence of oysters in Hong Kong’s bays and oceans has helped the livelihoods of thousands of fishermen and grown the seafood industry that is so ingrained in Hong Kong’s vibrant aquaculture. 
-        However, one aspect of this key industry has not been addressed. Oyster contamination.
-        <br><br>
-        Oysters are often contaminated with bacteria vibrio spp., a common gram-negative bacteria often found in marine environments. 
-        Contamination takes place as oysters feed. When filtering water, this bacteria can often become concentrated in oyster tissue, making it dangerous for consumption, especially raw.
-        <br><br>
-        The issue is detection. It is impossible to tell if an oyster is contaminated: a contaminated oyster will smell, look, and taste the same as any other oyster. 
-        Current methods of oyster purification do not include detection, rather attempt to purify oysters prior to selling them. 
-        <br><br>
-        Oysters are currently purified through the process of depuration, where the caught oysters are placed in clean water and cycled in order to maximize filtration and expel as much of the bacteria as possible. 
-        While this method is adequate, it doesn’t target the root of the problem. Current depuration processes do not detect bacteria and are not 100% reliable. 
-        Even with this process, people are still contaminated with vibrio each year.
-      </p>
-      <h5 id="item-2">Our Response</h5>
-      <br><br>
-      <p>While the existing method of bacteria detection is effective to an extent, it is more appreciated for its low cost and simple procedure. 
-        Our challenge was to develop a detection kit with a higher detection rate, similar accessibility, and at an affordable price. 
-        Rather than provide a stopgap solution, we wanted to really tackle the heart of the problem.
-          <br><br>
-        Our team has developed a point of detection kit, which, when combined with genetically engineered algae results in a safe supply of raw oysters to market.
-          <br><br>
-        We have not only interviewed professors and other experts in detection, but also experts with FDA experience and those familiar with Hong Kong’s aquaculture. 
-        This experience allowed us to better understand the ins and outs of Hong Kong’s fishing industry and to adapt our system to best fit the existing market.
-          <br><br>
-          Our CRISPR-based detection system doesn’t require heavy machinery or extreme scientific knowledge, 
-          but can rather be used by farm owners or in the process of transportation and export. 
-          Easy-to-operate and cost-effective, we hope that our detection system can bring ease and safety to such a significant industry.
-      </p>        
-      <div id="sources-div">
-        <h5 class="light" id="sources">Sources</h5>
-          <p class="thin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-          </p> 
-      </div>   
-    </body>
-  </div>
-</div>
+    </div>
+    <div id="text-content" class="col">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
+        <h2 id="item-1">Background</h2>
+          <p>&emsp;&emsp;This year's iGEM project proved to be challenging. With the rise of Covid, we identified early on that it would be difficult to connect effectively with the local residents and design a project centered around aiding a local problem. However, despite this setback, our team was firmly rooted in exploring Hong Kong’s unique culture while possibly extending this implication to the global community. 
+            <br><br>
+            &emsp;&emsp;When thinking about the origin and definition of traditional Hong Kong culture, the first thought that occurred to us was seafood and fisheries. Hong Kong was initially based as a small fishing village, only recently did it become “Asia’s world city.” With this truly spectacular evolution, we wanted to delve into the long-standing tradition that was molded to the city we see today.
+          </p>
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--PD_Picture.PNG" alt = "PD pic">
+        <h4 id="item-1-1">Historical Context</h4>
+          <p>&emsp;&emsp;The seafood industry in Hong Kong has thrived for over 700 years. The presence of seafood fueled the livelihood of thousands of fishermen, growing into the industry that is so ingrained in Hong Kong’s vibrant aquaculture as we see today. Within this giant sector, the oyster industry has always accompanied the steady growth of Hong Kong. Oyster farming within Hong Kong is a tradition that has been passed down through generations. Traditionally, oysters are cultured by the bottom culture method with spat collected by laying rock, concrete tile, or post as a clutch on the mudflat in May or June. Oysters are also suspended from floating structures such as rafts, held in trays or strung. These rafts used to be a common sight all over Hong Kong, from Deep Water Bay to Lau Fau Shan, with styrofoam, oil drums, and polyethylene floats appearing in the misty haze. 
+            <br><br>
+            &emsp;&emsp;However, despite many years of history, we found that oyster contamination is an issue yet to be solved. Even though oysters products appear everywhere such as restaurants, grocery stores, and even the sprawling wet markets across the island, there is a clear market gap when it comes to detecting and purifying oyster contamination.
+           
+          </p>
+        <h2 id="item-2">Solution Pt1: Detection</h2>
+          <p>&emsp;&emsp;Oysters are often contaminated with bacteria vibrio spp., a common gram-negative bacteria found in marine environments. Furthermore, oysters can also be subject to contamination from sources such as heavy metals and other norovirus strains. Contamination takes place as oysters feed. When filtering water, <i>Vibrio</i> can become concentrated in oyster tissue, making it dangerous for consumption, especially when eaten raw. The issue is that farmers and aquaculturists have no way of determining whether or not their oysters are contaminated due to the fact that current commercially available systems require expensive machinery and extensive knowledge in biology to operate. Due to the fact that most oyster farmers do not possess a background in biology and cannot afford to purchase a PCR machine and other related equipment, they often sell products that aren’t guaranteed to be safe. 
+            <br><br>
+            &emsp;&emsp;Our solution is a Vibrio detection system based on three core technologies: CRISPR (Cas12a enzyme), Recombinase Polymerase Amplification (RPA), and Lateral Flow Detection (LFD). Among the series of CRISPR Associated (Cas) proteins, Cas9 is undoubtedly the most well-known, famous for its ability to accurately detect and cleave specific locations based on a protospacer adjacent motif (PAM) and guide RNA (gRNA). The Cas12a enzyme is very similar to Cas9 in that it too possesses the ability to recognize PAM and form complexes with gRNA. The difference between these two enzymes lies in their cleaving abilities; Where Cas9 cleaves a single target location, Cas12a is capable of trans-cleavage<sup> [1]</sup>. Trans-cleavage is the ability to cleave non-specific sites, which is what makes our detection work. The next core technology implemented is Recombinase Polymerase Amplification (RPA)<sup> [2]</sup>. RPA is an isothermal amplification method that allows for mass amplification of genetic material, similar to Polymerase Chain Reaction (PCR). PCR is the most commonly used amplification method, but due to the nature of PCR, the amplification process cannot occur without a machine. PCR machines are not only costly but also require an experienced technician to handle and maintain. RPA, on the other hand, can proceed with three core proteins at room temperature. Lastly, we utilized a lateral flow test for its cheap cost, rapid detection, and ease of use.
+            <br><br>
+            &emsp;&emsp; Our lateral flow readout utilized Cas12a trans-cleavage in conjunction with fluorescein (FAM) and biotin-labeled ssDNA reporters for distinct results<sup>[3]</sup>. (Fig. 1) Lateral Flow Assays utilize nanoparticles for visible result bands. By using gold nanoparticles coupled with anti-FAM antibodies, the lateral flow strip will present distinct positive and negative results on specific bands on the assay. (Fig. 3) The assay would have a sample zone, conjugated zone, control band, then a sample band. The sample zone would be where the sample is dropped; the conjugated zone is saturated with gold nanoparticles coupled with anti-FAM antibodies, ensuring that if a FAM-labelled reporter were to pass through it would be bonded to by a particle. The control band would be saturated with streptavidin, which can anchor biotin-labeled complexes. (Fig. 2) Finally, the sample band would consist of anti-mouse antibodies, which would bind to the anti-FAM antibodies (mouse produced) coupled to the gold nanoparticles. The protospacer adjacent motif (PAM) (Fig. 1) has proven to be a significant limitation in the sites we could use for detection<sup>[4]</sup>. The purpose of a PAM site is primarily to assist in unwinding dsDNA and forming an R-Loop, which is necessary for checking gRNA compatibility. However, during RPA, the strand displacing polymerase unwinds and separates the target DNA. Research has indicated that in these highly specific situations, unlike Cas9, Cas12a is still able to perform DNA cleavage regardless of the presence of a PAM site. (Fig. 4). Thus removing the PAM site limitation in our circumstance. This enables more options for gRNA segments and increases the potential detection accuracy of our LFA.
+          </p>     
+          <img src = "C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--PD_Fig1.PNG" alt= "Fig1">
+          <br><br><br><br>
+          <img src = "C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--PD_Fig2.PNG" alt= "Fig2">
+          <br><br><br><br>
+          <img src = "C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--PD_Fig3.PNG" alt= "Fig3">
+          <br><br><br><br>
+          <img src = "C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--PD_Fig4.PNG" alt= "Fig4">
+        <h2 id="item-3">Solution Pt2: Purification</h2>
+          <p>&emsp;&emsp;The second part of our project is purification. After designing a functioning detection kit, we wanted to create a product that could be used in the event of a positive readout. This product would have to do what current mainstream methods cannot, which is to eliminate Vibrio without killing the oyster. Current mainstream methods include depuration (<a href = "https://www.fao.org/3/i0201e/i0201e01.pdf">explicitly written</a> by the FDA to be insufficient by itself for bivalve contamination treatment), irradiation, and high-pressure processing. These methods are all lacking a crucial feature, this feature is that they are incapable of fully purifying bacterial contamination down to raw consumption standards without killing the oyster being purified. It is important for the oyster to be alive because once an oyster loses freshness, its price value diminishes rapidly. 
+            <br><br>
+            &emsp;&emsp; Our solution for the purification of Vibrio contamination in oysters is for oyster containment water to be filled with the variant of an antimicrobial peptide called Tachyplesin I. We chose antimicrobial peptides over other antibiotics, or other chemicals is due to the fact that they are less susceptible to resistance mutation among bacteria compared to antibiotics<sup> [6]</sup>and also degrade rapidly, ensuring that no remaining active peptides will be ingested by consumers. While Vibrio’s innate resistance to AMPs may be an issue, due to the fact that Tachyplesin I is documented<sup> [7]</sup>to have antimicrobial capabilities against Vibrio bacteria, this issue is not important.
+            <br><br> 
+            &emsp;&emsp; A more advanced version of our solution for this issue is an algae-based antimicrobial peptide expression system that can simultaneously serve as food for oysters as well as express antimicrobial peptides required for the elimination of Vibrio bacteria concentrated in oyster guts. This method is much more affordable for farmers, as the proposed transgenic algae can be cultivated in very large colonies, and is therefore renewable. Not only this, by incorporating a surface display anchorage mechanism with short inflexible linkers<sup> [8]</sup>, we can ensure that the expressed peptides do not inhibit further algae growth. Then, with linkers designed to be susceptible to enzyme cleavage by native enzymes found in an oyster’s gut, we can ensure that peptides will be activated in their gut and still be able to eliminate present Vibrio bacteria. This is an effective workaround to the issue of a predicted negative feedback loop of algae growth where increased algae colony size expresses more AMPs which in turn inhibits further algae growth. However, this solution has yet to be implemented and is the next step our team is planning to take.
 
-<!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
-<footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <h1>Special Thanks to Our Sponsors!</h1>
-    <!-- Section: Images -->
-    <section class="">
-      <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
-        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-            style="width: 10.5vmax;"
-          >
-            <img
-              src="../static/media/images/new-england-biolabs.svg"
-              class="img-fluid w-100 shadow bg-white rounded"
-              alt="New England Biolabs"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
+          </p>      
+
+          <div id="sources-div">
+            <h3 id="sources">Sources</h2>
+            <p class="light"><sup> [1]</sup>Nguyen LT, Smith BM, Jain PK. Enhancement of trans-cleavage activity of Cas12a with engineered crRNA enables amplified nucleic acid detection. Nat Commun. 2020 Sep 30;11(1):4906. doi: 10.1038/s41467-020-18615-1. Erratum in: Nat Commun. 2020 Nov 24;11(1):6104. PMID: 32999292; PMCID: PMC7528031. [<a href = "https://www.nature.com/articles/s41467-020-18615-1">Nature Communication</a>]
+            <br>
+            <sup> [2]</sup>Wu H, Zhao P, Yang X, Li J, Zhang J, Zhang X, Zeng Z, Dong J, Gao S, Lu C. A Recombinase Polymerase Amplification and Lateral Flow Strip Combined Method That Detects Salmonella enterica Serotype Typhimurium With No Worry of Primer-Dependent Artifacts. Front Microbiol. 2020 Jun 23;11:1015. doi: 10.3389/fmicb.2020.01015. PMID: 32655504; PMCID: PMC7324538. [<a href = "https://www.frontiersin.org/articles/10.3389/fmicb.2020.01015/full">Frontiers In Microbiology</a>]
+            <br>
+            <sup> [3]</sup>Wang X, Ji P, Fan H, Dang L, Wan W, Liu S, Li Y, Yu W, Li X, Ma X, Ma X, Zhao Q, Huang X, Liao M. CRISPR/Cas12a technology combined with immunochromatographic strips for portable detection of African swine fever virus. Commun Biol. 2020 Feb 11;3(1):62. doi: 10.1038/s42003-020-0796-5. PMID: 32047240; PMCID: PMC7012833.
+            <br>
+            <sup> [4]</sup>Ding X, Yin K, Li Z, Lalla RV, Ballesteros E, Sfeir MM, Liu C. Ultrasensitive and visual detection of SARS-CoV-2 using all-in-one dual CRISPR-Cas12a assay. Nat Commun. 2020 Sep 18;11(1):4711. doi: 10.1038/s41467-020-18575-6. PMID: 32948757; PMCID: PMC7501862.
+            <br>
+            <sup> [5]</sup>Jeon Y, Choi YH, Jang Y, Yu J, Goo J, Lee G, Jeong YK, Lee SH, Kim IS, Kim JS, Jeong C, Lee S, Bae S. Direct observation of DNA target searching and cleavage by CRISPR-Cas12a. Nat Commun. 2018 Jul 17;9(1):2777. doi: 10.1038/s41467-018-05245-x. PMID: 30018371; PMCID: PMC6050341.
+            <br>
+            <sup> [6]</sup>Spohn, R., Daruka, L., Lázár, V. et al. Integrated evolutionary analysis reveals antimicrobial peptides with limited resistance. <i>Nat Commun</i> 10, 4538 (2019). <a href="https://doi.org/10.1038/s41467-019-12364-6">https://doi.org/10.1038/s41467-019-12364-6</a>
+            <br>
+            <sup> [7]</sup>Morvan A, Iwanaga S, Comps M, Bachere E. In Vitro Activity of the Limulus Antimicrobial Peptide Tachyplesin I on Marine Bivalve Pathogens. J Invertebr Pathol. 1997 Mar;69(2):177-82. doi: 10.1006/jipa.1996.4642. PMID: 9056468.
+            <br>
+            <sup> [8]</sup>Tucker AT, Leonard SP, DuBois CD, Knauf GA, Cunningham AL, Wilke CO, Trent MS, Davies BW. Discovery of Next-Generation Antimicrobials through Bacterial Self-Screening of Surface-Displayed Peptide Libraries. Cell. 2018 Jan 25;172(3):618-628.e13. doi: 10.1016/j.cell.2017.12.009. Epub 2018 Jan 4. PMID: 29307492; PMCID: PMC5786472.
+            </p>
+          </div>  
+      </body>
+    </div>
+  </div>
+
+  <!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+  <footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <h1 style="margin-top: 1.5vh !important;">Special Thanks to Our Sponsors!</h1>
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 10.5vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="New England Biolabs"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 19vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Twist Bioscience"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 9.33vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
           </div>
         </div>
-        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-            style="width: 19vmax;"
-          >
-            <img
-              src="../static/media/images/twist.svg"
-              class="img-fluid w-100 shadow bg-white rounded"
-              alt="Twist Bioscience"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-            style="width: 9.33vmax;"
-          >
-            <img
-              src="../static/media/images/rtc.svg"
-              class="img-fluid w-100 shadow bg-white rounded"
-              alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section: Images -->
+      </section>
+      <!-- Section: Images -->
 
-    <!-- Section: Form -->
-    <section class="">
-      <h3>Contact Us</h3>
-      <h4>igem.hshk@gmail.com</h3>
-    </section>
-    <!-- Section: Form -->
+      <!-- Section: Form -->
+      <section>
+        <h3 class="contact">Contact Us</h3>
+        <h4 class="contact">igem.hshk@gmail.com</h3>
+      </section>
+      <!-- Section: Form -->
 
-  </div>
-  <!-- Grid container -->
+    </div>
+    <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright:
-    <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
-<script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
-<script src="../static/js/jquery.min.js" ></script>
-<script>
-
-  const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), titleText = $("h5"), bodyText = $("p"), navText = $("#sidebar .nav-link");
-  const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
-  for (let i = 0; i < boldText.length; i++) {
-    boldText[i].style.color = "#7498d6";
-    boldText[i].classList.add("semi-bold");
-  }
-
-  for (let i = 0; i < linkText.length; i++) {    
-    linkText[i].classList.add("link");
-    linkText[i].classList.add("medium");
-  }
-
-  for (let i = 0; i < titleText.length; i++) {
-    titleText[i].style.color = "#7498d6";
-    titleText[i].classList.add("bold");
-  }
-
-  for (let i = 0; i < bodyText.length; i++) {
-    bodyText[i].style.color = "black";
-    bodyText[i].classList.add("regular");
-  }
-
-  for (let i = 0; i < navText.length; i++) {
-    navText[i].classList.add("medium");
-  }
-
-  var didCollapse = false;
-  $(".navbar-toggler").click(() => {
-      let dropdowns = navbar.find("li");
-      let menu = dropdowns.find(".dropdown-menu");
-      if (!didCollapse) {
-        dropdowns.addClass("dropdown-collapse");
-        dropdowns.removeClass("nav-item-hover dropdown-hover");
-        menu.removeClass("dropdown-menu-end fade-down show");
-        menu.css("position", "relative");
-      } else {
-        dropdowns.removeClass("dropdown-collapse");
-        setTimeout(() => {menu.addClass("dropdown-menu-end fade-down show");}, 250);
-        menu.css("position", "absolute");
-      }
-      didCollapse = !didCollapse;
-    }
-  );
-
-
-  // try $(document).ready()
-  let windowLoaded = false;
-  $(window).on("load", () => { setWebsiteLayout(); windowLoaded = true; });
-  $(window).on("orientationchange", setWebsiteLayout);
-
-  function setWebsiteLayout() {
-    if ((!isPortrait() && windowLoaded) || (isPortrait() && !windowLoaded)) {
-      $("#sidebar-col").removeClass(screenSizes);
-      navbar.removeClass("navbar-expand-lg");
-      navbar.addClass("navbar-expand-xl");
-    } else {
-      $("#sidebar-col").addClass(screenSizes);
-      navbar.removeClass("navbar-expand-xl");
-      navbar.addClass("navbar-expand-lg");
-    }
-  }
-
-  function isPortrait() { return ($(window).innerHeight() > $(window).innerWidth()); }
-
-  function vh(v) {
-    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    return (v * h) / 100;
-  }
-
-  function vw(v) {
-    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    return (v * w) / 100;
-  }
-
-  function vmin(v) {
-    return Math.min(vh(v), vw(v));
-  }
-
-  function vmax(v) {
-    return Math.max(vh(v), vw(v));
-  }
-</script>
+  <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+  <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
+  <script type="text/javascript" src="../static/js/content.js"></script>
 </html>

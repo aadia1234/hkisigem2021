@@ -1,142 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 
-    Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
-    "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
-    https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
-  -->
-  <link type=text/css rel="stylesheet" href="../static/css/bootstrap.min.css">
-  <link type=text/css rel="stylesheet" href="../static/css/base.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <style>
+<!-- {{ HKIS/base.html }} -->
 
-    #header h1 {
-      text-align: center;
-      background:
-          linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0, 0, 0, 0.5)
-        ),
-        url("https://2021.igem.org/wiki/images/9/95/T--HKIS--480p_test_img.jpg");
-      background-size: cover;
-      width: 100%;
-      padding: 42.5vmin 0 42.5vmin 0;
-      font-size: 10rem;
-      margin: auto;
-      color: white;
-    }
-
-    #header::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2.5vh;
-      left: 0;
-      margin-top: -0.675%;
-      background-color: #D7B1BF;
-      z-index: 2;
-    }
-
-    #content-row {
-      min-width: fit-content !important;
-      min-height: fit-content !important;
-      max-width: fit-content !important;
-      max-height: fit-content !important;
-      margin: 0 !important;
-      background-color: #eee4d1;
-    }
-
-    #sidebar-col {
-      padding: 0 !important;
-      max-width: inherit;
-      min-width: 20vw;
-      background-color: #c4dbd3;
-      z-index: 1;
-    }
-
-    #sidebar {
-      margin: auto;
-      width: 90% !important;
-      padding: 2vh 1vw 2vh 1vw;
-      font-size: 2rem;
-      height: fit-content;
-      width: 15vw;
-    }
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+      "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
+      https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
+    -->
+    <link type=text/css rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../static/css/base.css">
+    <link type=text/css rel="stylesheet" href="../static/css/content.css">
+    <!-- <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/content.css&action=raw&ctype=text/css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    #sidebar .nav-link.active {
-      color: #7498d6 !important;
-      background-color: transparent;
-    }
-
-    #sidebar .nav-link {
-      color: black !important;
-    }
-
-
-    #sidebar .nav-link::after {
-      content: "";
-      position: absolute;
-      width: 1.5%;
-      height: 4rem;
-      right: 2vw;
-      margin-top: -0.5rem;
-      background-color: #D7B1BF !important;
-      transform: scale(0, 1);
-      transition: transform 0.5s ease !important;
-    }
-
-    #sidebar .nav-link.active::after {
-      transform: scale(1, 1);
-    }
-    
-    #sidebar .nav-link:hover::after {
-      transform: scale(1, 1);
-    }
-
-    #text-content {
-      position: relative;
-      padding-right: 0;
-      margin-left: 10%;
-      margin-right: 10%;
-      height: max-content;
-    }
-
-    #text-content h5 {
-      font-size: 5rem;
-      padding-top: 10vh;
-      color: #7498d6;
-    }
-
-    #text-content p {
-      font-size: 2rem;
-      padding-bottom: 2.5vh;
-    }
-
-    #text-content .link {
-      color: #7498d6;
-    }
-
-    #text-content .link:hover {
-      color: #b3c9f0;
-    
-    }
-
-    #sources-div h5 {
-      font-size: 3rem;
-    }
-
-    #sources-div p {
-      font-size: 1rem;
-    }
-  </style>
-  
-</head>
-
+  </head>
 <!-- {{ HKIS/base.html }} -->
 <nav id="navbar" class="shadow navbar sticky-top navbar-expand-lg navbar-dark">
   <div class="container-fluid">
@@ -233,251 +115,195 @@
     </div>
   </div>
 </nav>
-<div id="header">
-  <h1 class="black">Proof Of Concept</h1>
-</div>
+  <div id="header">
+    <h1 class="black">Proof of Concept</h1>
+  </div>
 
-<div id="content-row" class="row">
-  <div id="sidebar-col" class="col d-none shadow-sm">
-    <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
-      <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
-        <h1 class="bold" style="text-align: center;">Page Overview</h1>
-        <br>
-        <a class="nav-link active" href="#item-1">Item 1</a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-5 my-0" href="#item-1-1">Item 1-1</a>
-          <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Item 1-2</a>
+  <div id="content-row" class="row">
+    <!-- class += d-none -->
+    <div id="sidebar-col" class="col shadow-sm">
+      <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+        <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+          <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
+          <br>
+          <a class="nav-link active" href="#item-1">Introduction</a>
+          <a class="nav-link mb-4" href="#item-2">Social Engagement </a>
+          <a class="nav-link" href="#item-3">Wetlab - Kit Development</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0" href="#item-3-1">Limits of Detection</a>
+            <a class="nav-link ms-5 my-0 mb-4" href="#item-3-2">Asymmetric Primers</a>
+          </nav>
+          <a class="nav-link active" href="#item-4">Hardware</a>
+          <a class="nav-link active" href="#item-5">Realistic Implementation</a>
         </nav>
-        <a class="nav-link mb-4" href="#item-2">Item 2</a>
-        <a class="nav-link" href="#item-3">Item 3</a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-5 my-0" href="#item-3-1">Item 3-1</a>
-          <a class="nav-link ms-5 my-0 mb-4" href="#item-3-2">Item 3-2</a>
-        </nav>
-        <a class="nav-link" href="#sources">Sources</a>
       </nav>
-    </nav>
-  </div>
-  <!-- <body> -->
-  <div id="text-content" class="col">
-    <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="0" tabindex="0">
-      <h5 id="item-1">Item 1</h5>
-        <p>Lorem ipsum <b>BOLD</b> <i><b>ITALICS</b></i> <a href="https://google.com">LINK</a> dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>
-      <h5 id="item-1-1">Item 1-1</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>
-      <h5 id="item-1-2">Item 1-2</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>      
-      <h5 id="item-2">Item 2</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>      
-      <h5 id="item-3">Item 3</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>      
-      <h5 id="item-3-1">Item 3-1</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p>      
-      <h5 id="item-3-2">Item 3-2</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-          Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-          Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-        </p> 
-      <div id="sources-div">
-        <h5 class="light" id="sources">Sources</h5>
-          <p class="thin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-          </p> 
-      </div>   
-    </body>
-  </div>
-</div>
+    </div>
+    <div id="text-content" class="col">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
+        <h2 id="item-1">Proof of Concept</h2>
+          <p> &emsp; &emsp; We determined the viability of our product in-field in multiple ways. Our detection system has uses in wet markets, restaurants, hotels, and other levels of the oyster production chain. Because of this range of possible applications, we had to ensure that our detection system would function in different settings, environments, and levels of contamination. In terms of our lab work, in addition to our existing protocols, we wanted to best establish the sensitivity of our detection system, and examine potential improvements we could make to expand its affordability and scope of detection. In addition to the technical side of our proof of concept, we also conducted several interviews throughout the course of our project with several potential consumers. Additionally, we developed a portable incubator to ensure the functionality of our detection system in varying environmental temperatures. Overall, our holistic approach to developing a strong detection system gave us a functional solution that not only works in a lab but in its real-world context.
+          </p>
+        
+        <h2 id="item-2">Social Engagement - Target Consumers</h2>
+          <p>&emsp;&emsp;Throughout the course of our project, we conducted several interviews with potential consumers, ranging from wet-market stall owners to restaurants to large-scale corporations. We conducted these interviews and surveys in order to determine. This was another way to evaluate the viability of our product. The feedback we received on the practical applicability of our kit was very positive, as many wet market stall owners cited that our kit would definitely see use provided that it was as affordable and cheap as we projected. They really appreciated the intuitive and easy-to-use concept our kit possesses.
+            <br><br>
+            &emsp;&emsp;We also interviewed many restaurant managers who further confirmed that our kit could see use in restaurants, specifically for screening batches of seafood. Many of the people we interviewed were also quick to also understand that despite the fact that our kit is designed for the detection of oyster bacteria, it could also be applied to other kinds of seafood, which is what made our kit appealing to seafood restaurants that import a variety of seafood.
+            <br><br>
+            &emsp;&emsp;Our interviews helped us refine a realistic implementation of our product, as they confirmed potential consumers of Vib-Check and confirmed that the potential consumers have a need for our product. Overall, this helped to expand our idea outside the limits of the lab, and into the real-world market.
+          </p>
+        <h2 id="item-3">Wetlab - Kit Development</h2>
+        <h4 id="item-3-1" style = "margin-top: -5vh;">Limits of Detection</h4>
+          <p>&emsp; &emsp;In order to demonstrate that our kit is suitable for real-world situations, we must test its accuracy and reliability to the extremes. 
+            <br><br>
+            &emsp; &emsp;One way that we decided to test the limits of our detection system was by evaluating the amounts of templates that our system would pick up. This was one of the first tests of our system as a whole since the variable we altered was the DNA template rather than individual components of our detection kit. To run this experiment, we prepared our RPA mix and our Cas mix normally and essentially ran through our detection system. We prepared eight tubes of the mix. In each tube, we scaled down the amount of template tenfold, with the eighth tube containing no template, as a control. We calculated the amount of template by the number of copies per microliter. 
+            <br><br>
+            &emsp; &emsp; We incubated the reaction for thirty minutes and recorded photos at 0, 5, 10, 20, and 30 minutes. This allowed us to gauge the level of brightness at different intervals. From our results, we were able to visualize the quantity of templates that our system could detect.
+            <br><br>
+            &emsp; &emsp;This helped us to determine the sensitivity of our kit. It further showed its potential use in a field situation, where the amount of Vibrio in a contaminated sample could vary. This experiment proved that Vib-Check had a very large scope of detection and it is incredibly reliable for real-world application and use, as consumers would undoubtedly want to be aware of even the most minute quantities of Vibrio contamination in their oysters.
 
-<!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
-<footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <h1>Special Thanks to Our Sponsors!</h1>
-    <!-- Section: Images -->
-    <section class="">
-      <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
-        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-            style="width: 10.5vmax;"
-          >
-            <img
-              src="../static/media/images/new-england-biolabs.svg"
-              class="img-fluid w-100 shadow bg-white rounded"
-              alt="New England Biolabs"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
+          </p>      
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC--Table.PNG" alt = "POC first table">
+          <br><br><br><br>
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Picture.PNG" alt = "POC pic">
+        <h4 id="item-3-2">Asymmetric Primers</h4>
+          <p>&emsp; &emsp;One way we attempted to increase the sophistication of our experiment was through the use of an asymmetric ratio of primers. This experiment helped reduce the costs of production for our kit, as one way of bringing our product to a real-world market. This cost reduction aligned with our goals of developing an affordable kit, which is a major factor we kept in mind when designing our product. In this experiment, we attempted to increase the yield of ssDNA without increasing the use of the Cas12a enzyme. We aimed to reduce the cost of our detection kit. Rather than brute-force results in a crude method of overloading with reagents, we wanted to use asymmetric primers to increase our ssDNA yield. To do this, we tested different ratios of forward and reverse primers to find the best ratio of asymmetry. 
+            <br><br>
+            &emsp; &emsp;The first set of results below are from our first attempt at this experiment. We found that the 0.32F and 0.032R tubes had the best result, and generally, the lower concentration of forward and reverse primers had a better result than the higher concentrations. However, tube 3 in this result had quite a strange result, so we wanted to retest our protocol. We came to the conclusion that the longer RPA duration with higher primer concentration led to more duplex strands and completed RPA, this isn’t beneficial for our project, as the goal is to maximize single strand template DNA for our gRNA, as it is designed without considering PAM. Therefore, when we ran the experiment again (results seen in the second photo), we designed with a shorter RPA incubation to reduce the completion of RPA. With these changes, we got much brighter results and a more successful experiment. 
+          </p>
+          <p style = "margin-top: -1vh;">
+            First experiment results: 
+          </p><img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Table2.PNG" alt = "POC table2">
+          <br><br><br><br><br><br>
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Picture2.PNG" alt = "POC pic2">
+          <br><br><br>
+          <p>
+            Second experiment results:
+          </p><img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Table3.PNG" alt = "POC table3">
+          <br><br><br><br><br><br>
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Picture3.PNG" alt = "POC pic3">
+
+
+        <h2 id="item-4">Hardware - Sodium Acetate Incubator</h2>
+          <p>&emsp; &emsp;As one of our contributions, we developed and 3D-printed a sodium acetate-based incubator. This incubator is portable, relatively small in size and a very good insulator. Our heat block is entirely reusable and environmentally friendly. The reaction temperature for our detection system is extremely low relative to existing systems, at only 37°C. However, considering the wide range of potential applications for our system, we wanted to develop an incubating system that would insulate at our target reaction temperature for long periods of time. We developed and built our incubator with intuitive ease of use. The heating portion is a heat pack filled with sodium acetate solution and thus requires no electricity or external energy sources. The heat reaction is started by snapping a button inside the gel package, and it is entirely reusable. Once the reaction begins, a user simply has to place it inside the incubator and close the lid. With spaces for several tubes, this incubator can be used to run several tests at once. Considering our target audience could include stall owners at Hong Kong’s wet markets, where the temperature largely fluctuates in the outdoor environment, or a restaurant that maintains cooler indoor temperatures, we developed this system to take up very little space while also maintaining stable temperatures.
+          </p>
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Graph.PNG" alt = "POC graph">
+          <br><br><br>
+          <p>&emsp; &emsp;The sodium acetate heat pack was able to raise the internal temperature of the reaction tube to the optimal reaction temperature of 37*C within 3 minutes and maintain it for at least 33 minutes with no significant temperature deviations. This demonstrates that the incubator is capable of sustaining the optimal temperature range for the entire duration of the RPA and CRISPR Cas12a reaction duration, proving our incubator works as we need it to.
+          </p>
+        <h2 id="item-5">Realistic Implementation - Detection with Vibrio Genome</h2>
+          <p>&emsp; &emsp;After running our experiments with a DNA template designed for our guide RNA, we decided to put everything together in a final proof of concept experiment. In this experiment, we ran through our detection kit using our hardware, and all of our developed parts.
+            <br><br>
+            &emsp; &emsp; We performed a controlled experiment with real Vibrio and a control species of bacteria with our kit and ran through the procedures in which we expect our kit to be used. The real Vibrio bacteria were isolated with extreme care by our mentor Kenneth Ng, who is an HKU iGEM team member. The experiments performed were under extreme supervision to ensure proper safety precautions were taken and that there was no risk of skin or lab contamination.
+            <br><br>
+            &emsp; &emsp;
+            When running our experiment, we used our dipstick-lysis buffer solution system To incubate our reaction, we used our 3D-printed sodium acetate incubator. We wanted to incubate it this way--rather than using lab machinery--so that we could mimic the real conditions of kit use. This was a good way to demonstrate the application of the kit in the field scenarios without access to lab machinery. 
+        
+          </p>
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC_Picture4.PNG" alt = "POC pic4">
+          <br><br><br><br>
+          <p>&emsp; &emsp;The final result demonstrated distinct positive and negative results for our positive and negative control experiments. With our positive control being Vibrio bacteria, and our negative control being non-Vibrio bacteria. The figure on the left demonstrates how results will show on a real product. The positive and negative results on the lateral flow assays are both very distinct, which is an excellent illustration of the functionality and ease of interpretation of the results displayed by our kit. The fluorescence based visualization of the result (the right image) is further proof that our kit is capable of detecting the presence of real Vibrio bacteria in a sample solution or mixture.</p>
+        
+          <img src="C:\Users\micha\Documents\GitHub\hkisigem2021\static\media\images\T--HKIS--POC--Picture5.PNG" alt = "POC pic5">
+          <div id="sources-div">
+            <h3 id="sources">Sources</h3>
+            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
+              Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
+              Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+            </p>
+          </div>  
+      </body>
+    </div>
+  </div>
+
+  <!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+  <footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <h1 style="margin-top: 1.5vh !important;">Special Thanks to Our Sponsors!</h1>
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 10.5vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="New England Biolabs"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 19vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Twist Bioscience"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 9.33vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
           </div>
         </div>
-        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-            style="width: 19vmax;"
-          >
-            <img
-              src="../static/media/images/twist.svg"
-              class="img-fluid w-100 shadow bg-white rounded"
-              alt="Twist Bioscience"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-            style="width: 9.33vmax;"
-          >
-            <img
-              src="../static/media/images/rtc.svg"
-              class="img-fluid w-100 shadow bg-white rounded"
-              alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
-            />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section: Images -->
+      </section>
+      <!-- Section: Images -->
 
-    <!-- Section: Form -->
-    <section class="">
-      <h3>Contact Us</h3>
-      <h4>igem.hshk@gmail.com</h3>
-    </section>
-    <!-- Section: Form -->
+      <!-- Section: Form -->
+      <section>
+        <h3 class="contact">Contact Us</h3>
+        <h4 class="contact">igem.hshk@gmail.com</h3>
+      </section>
+      <!-- Section: Form -->
 
-  </div>
-  <!-- Grid container -->
+    </div>
+    <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright:
-    <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
-<script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
-<script src="../static/js/jquery.min.js" ></script>
-<script>
-
-  const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), titleText = $("h5"), bodyText = $("p"), navText = $("#sidebar .nav-link");
-  const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
-  for (let i = 0; i < boldText.length; i++) {
-    boldText[i].style.color = "#7498d6";
-    boldText[i].classList.add("semi-bold");
-  }
-
-  for (let i = 0; i < linkText.length; i++) {    
-    linkText[i].classList.add("link");
-    linkText[i].classList.add("medium");
-  }
-
-  for (let i = 0; i < titleText.length; i++) {
-    titleText[i].style.color = "#7498d6";
-    titleText[i].classList.add("bold");
-  }
-
-  for (let i = 0; i < bodyText.length; i++) {
-    bodyText[i].style.color = "black";
-    bodyText[i].classList.add("regular");
-  }
-
-  for (let i = 0; i < navText.length; i++) {
-    navText[i].classList.add("medium");
-  }
-
-  var didCollapse = false;
-  $(".navbar-toggler").click(() => {
-      let dropdowns = navbar.find("li");
-      let menu = dropdowns.find(".dropdown-menu");
-      if (!didCollapse) {
-        dropdowns.addClass("dropdown-collapse");
-        dropdowns.removeClass("nav-item-hover dropdown-hover");
-        menu.removeClass("dropdown-menu-end fade-down show");
-        menu.css("position", "relative");
-      } else {
-        dropdowns.removeClass("dropdown-collapse");
-        setTimeout(() => {menu.addClass("dropdown-menu-end fade-down show");}, 250);
-        menu.css("position", "absolute");
-      }
-      didCollapse = !didCollapse;
-    }
-  );
-
-
-  // try $(document).ready()
-  let windowLoaded = false;
-  $(window).on("load", () => { setWebsiteLayout(); windowLoaded = true; });
-  $(window).on("orientationchange", setWebsiteLayout);
-
-  function setWebsiteLayout() {
-    if ((!isPortrait() && windowLoaded) || (isPortrait() && !windowLoaded)) {
-      $("#sidebar-col").removeClass(screenSizes);
-      navbar.removeClass("navbar-expand-lg");
-      navbar.addClass("navbar-expand-xl");
-    } else {
-      $("#sidebar-col").addClass(screenSizes);
-      navbar.removeClass("navbar-expand-xl");
-      navbar.addClass("navbar-expand-lg");
-    }
-  }
-
-  function isPortrait() { return ($(window).innerHeight() > $(window).innerWidth()); }
-
-  function vh(v) {
-    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    return (v * h) / 100;
-  }
-
-  function vw(v) {
-    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    return (v * w) / 100;
-  }
-
-  function vmin(v) {
-    return Math.min(vh(v), vw(v));
-  }
-
-  function vmax(v) {
-    return Math.max(vh(v), vw(v));
-  }
-</script>
+  <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+  <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
+  <script type="text/javascript" src="../static/js/content.js"></script>
 </html>
