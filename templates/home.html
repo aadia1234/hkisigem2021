@@ -1,0 +1,181 @@
+<!-- {{ HKIS/base.html }} -->
+
+<html>
+
+  <head>
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/home.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../static/css/base.css">
+    <link type=text/css rel="stylesheet" href="../static/css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <!-- Introduction slideshow -->
+  <!-- 3 textboxes on the sea animation (left, right, left) -->
+  <!-- Sillhouete drawing at the bottom of the sea -->
+  <body>
+    <div id="introSlideshow" class="shadow-lg bg-body rounded-3 carousel slide" data-ride="carousel">
+      <div class="shadow-lg carousel-inner rounded-3">
+        <div class="carousel-item active">
+          <img class="d-block w-100 img-fluid rounded-3" src="../static/media/images/team_photo.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 img-fluid rounded-3" src="../static/media/images/oyster_farm.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 img-fluid rounded-3" src="../static/media/images/oysters.jpg" alt="Third slide">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#introSlideshow" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#introSlideshow" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+    </div>
+
+
+    <svg id="arrow-down" xmlns="http://www.w3.org/2000/svg" width="16" height="8" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      <circle id="arrow-down-circle" cx="8" cy="8" r="8" stroke-width="3"></circle>
+    </svg>
+
+    <section id="sea-animation">
+      <div id="wave-wrapper">
+        <div id="wave-wrapper-1">
+          <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave1"/></svg>
+        </div>
+        <div id="wave-wrapper-2">
+          <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave2"/></svg>
+        </div>
+      </div>
+      <section id="info">
+        <div id="info-1" class="info-anchor shadow-lg">
+          <h1 class="medium">Context: Vibrio</h1>
+          <p class="light">
+            Across the world, Vibrio pathogens are becoming increasingly prevalent in seafood, specifically bivalves and oysters. 
+            In fact, there are more than <b>80,000</b> people being infected by Vibrio-related bacterium, and an estimated <b>100</b> Vibrio-caused 
+            deaths each year, which amounts to <b>95%</b> of all seafood-related deaths.
+          <p>
+        </div>
+        <div id="info-2" class="info-anchor shadow-lg">
+          <h1 class="medium">Problem: Cost</h1>
+          <p class="light">
+            Unfortunately, as all current methods of Vibrio detection rely on the use of <b>expensive thermocycling machines</b>, 
+            there is no cheap, quick, and effective method to determine if oysters are clean. Additionally, there are no oyster 
+            contamination purification methods capable of killing pathogens without killing the oysters in the process.
+          <p>
+        </div>
+        <div id="info-3" class="info-anchor shadow-lg">
+          <h1 class="medium">Solution: Point-of-care Detection – Vib-check</h1>
+          <p class="light">
+            Our team’s solution for the lack of viable detection methods is a Vibrio detection kit that relies on a novel <b>isothermal amplification method</b>
+            in conjunction with the highly specific enzyme <b>CRISPR Cas12a</b> for the rapid and accurate detection 
+            of minuscule Vibrio DNA signals.
+          </p>
+        </div>
+        <div id="info-4" class="info-anchor shadow-lg">
+          <h1 class="medium">Solution: Antimicrobial Peptide Purification</h1>
+          <p class="light">
+            Besides detection, another large part of the issue with Vibrio contamination in oysters is the lack of sufficient purification methods. 
+            Our solution is using algae – natural oyster feed used in aquacultures to feed oysters – to express highly effective <b>anti-Vibrio antimicrobial peptides</b>
+            for eliminating Vibrio contamination in fresh samples, or contamination remaining from current purification methods.
+          </p>
+        </div>
+      </section>
+      <img id="sea-background" src="https://2021.igem.org/wiki/images/1/1b/T--HKIS--oyster_background.svg"></img>
+    </section>
+    
+    <footer class="text-center text-white pt-5" style="z-index: 999; background-color: #000000;">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <h1>Special Thanks to Our Sponsors!</h1>
+        <!-- Section: Images -->
+        <section class="">
+          <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+            <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+                style="width: 10.5vmax;"
+              >
+                <img
+                  src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                  class="img-fluid w-100 shadow bg-white rounded"
+                  alt="New England Biolabs"
+                />
+              </div>
+            </div>
+            <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+                style="width: 19vmax;"
+              >
+                <img
+                  src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                  class="img-fluid w-100 shadow bg-white rounded"
+                  alt="Twist Bioscience"
+                />
+              </div>
+            </div>
+            <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+                style="width: 9.33vmax;"
+              >
+                <img
+                  src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                  class="img-fluid w-100 shadow bg-white rounded"
+                  alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Images -->
+    
+        <!-- Section: Form -->
+        <section class="">
+          <h3>Contact Us</h3>
+          <h4>igem.hshk@gmail.com</h4>
+        </section>
+        <!-- Section: Form -->
+    
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <div>
+      <script src="../static/js/TweenMax.min.js"></script>    
+      <script src="../static/js/wavify.js"></script>
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/js/home.js"></script>
+      <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/TweenMax.min.js&action=raw&ctype=text/javascript"></script>
+      <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/wavify.js&action=raw&ctype=text/javascript"></script>
+      <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+      <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/home.js&action=raw&ctype=text/javascript"></script>
+      <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+    </div>
+  </body>
+</html>
