@@ -94,15 +94,8 @@
   height: max-content;
 }
 
-#text-content h2 {
+#text-content h2, h3, h4 {
   font-size: 5rem;
-  padding-top: 10vh !important;
-  color: #7498d6 !important;
-  margin-bottom: 0.5rem !important;
-}
-
-#text-content h3 {
-  font-size: 3.5rem;
   padding-top: 10vh !important;
   color: #7498d6 !important;
   margin-bottom: 0.5rem !important;
@@ -123,7 +116,7 @@
 }
 
 #sources-div p {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 footer h3, h4 {

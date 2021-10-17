@@ -1,4 +1,4 @@
-const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), headerText = $("h2"), subHeaderText = $("h3"), bodyText = $("p"), navText = $("#sidebar .nav-link");
+const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), headerText = $("h2"), subHeaderText = $("h3"), subSubHeaderText = $("h4"), bodyText = $("p"), navText = $("#sidebar .nav-link");
 const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
 
 for (let t of boldText) {
@@ -13,12 +13,20 @@ for (let t of linkText) {
 
 for (let t of headerText) {
   t.style.color = "#7498d6";
+  t.style.fontSize = "5rem"; 
   t.classList.add("bold");
 }
 
 for (let t of subHeaderText) {
   t.style.color = "#7498d6";
+  t.style.fontSize = "4rem";
   t.classList.add("semi-bold");
+}
+
+for (let t of subSubHeaderText) {
+  t.style.color = "#7498d6"
+  t.style.fontSize = "3rem";
+  t.classList.add("medium");
 }
 
 for (let t of bodyText) {
