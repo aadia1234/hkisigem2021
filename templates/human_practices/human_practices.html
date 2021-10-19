@@ -1,0 +1,214 @@
+<!-- {{ HKIS/base.html }} -->
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      Use replace "../../css" with "../../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+      "../../" means the path (directory) of the parent folder - using "../../" in this html file will return the filepath of the "static folder"
+      https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
+    -->
+    <link type=text/css rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/base.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/content.css">
+    <!-- <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/content.css&action=raw&ctype=text/css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  </head>
+
+  <style>
+    #header h1 {
+      text-align: center !important;
+      background:
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../../static/media/images/T--HKIS--HP_Banner.png");
+      background-size: cover;
+      width: 100%;
+      padding: 42.5vmin 0 42.5vmin 0 !important;
+      font-size: 10rem;
+      margin-top: -5vh;
+      color: white !important;
+    }
+  </style>
+
+  <div id="header">
+    <h1 class="black">Human Practices</h1>
+  </div>
+
+  <div id="content-row" class="row">
+    <!-- class += d-none -->
+    <div id="sidebar-col" class="col shadow-sm">
+      <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+        <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+          <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
+          <br>
+          <a class="nav-link active mb-4" href="#intro">Introduction</a>
+          <a class="nav-link" href="#industry">Industry Professionals</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-4 my-0" href="#hku">HKU Interview</a>
+            <a class="nav-link ms-4 my-0" href="#fda">FDA Interview</a>
+            <a class="nav-link ms-4 my-0" href="#hksar">HKSAR Interview</a>
+            <a class="nav-link ms-4 my-0 mb-4" href="#next">Next Steps</a>
+          </nav>
+          <a class="nav-link" href="#stakeholder">Stakeholder Surveys and Interviews</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-4 my-0" href="#lee">Lee Kum Kee Interview</a>
+            <a class="nav-link ms-4 my-0" href="#wet-market">Wet-Market Surveys</a>
+            <a class="nav-link ms-4 my-0 mb-4" href="#restraunt">Restraunt Survey</a>
+          </nav>
+        </nav>
+      </nav>
+    </div>
+    <div id="text-content" class="col">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
+        <h2 id="intro">Introduction</h2>
+        <p>
+          Our team has identified a significant issue with the current seafood industry, the oyster industry in particular. The problem is that globally, fishers do not have access to any diagnostic tools for determining if their produce is contaminated with Vibrio. The current products on the market for detection of Vibrio contamination are purely designed for lab work, not for aquaculturists and fishers. However, we knew that this initial research would not be enough to thoroughly understand the scope of this issue. As a result, we interviewed potential stakeholders and professionals within the aquaculture and seafood industry to better grasp the matter at hand. Our interviews informed us regarding the situation we were trying to solve and helped shape our product into what it is today. We are incredibly grateful for everyone that allowed us the time to learn from their knowledge and experience.
+        </p>
+        <h2 id="industry">Industry Professionals</h2> 
+        <p><h4>What were we looking for?</h4></p>
+        <p>
+          In these interviews, we were primarily looking for background knowledge on the oyster industry, specifically the production side. We entered this interview mainly looking for problems to solve and glaring issues that needed to be addressed within the scope of our solution.
+        </p>
+        <h3 id="hku">Dr. Rajan - Associate Professor - HKU Interview</h3> 
+        <img src="../../static/media/images/T--HKIS--Dr_Rajan_Interview.png">
+        <br>
+        <p>
+          One of the first people our team met with regarding our project was Dr. Rajan. As an associate professor in the School of Biological Sciences at the University of Hong Kong, who has worked closely with the Agriculture, Fisheries, and Conservation Department in the Hong Kong government, Dr. Rajan was a crucial resource in our early research and development. Dr. Rajan has focused mainly on Hong Kong’s oyster aquaculture. His insights into the operations of the oyster industry and habitats were helpful when developing our idea. He confirmed that the conventional methods of depuration were the only cost-effective methods of cleaning oysters at present, which helped us cement our idea as necessary to improve the current situation. Furthermore, he offered valuable criticism regarding the issue of the oyster industry being “green.” Our main concerns shifted to developing a more cost-effective solution and creating an option that allowed oysters to remain “green” and natural. In addition, he also confirmed for us that the industry did lack a viable, cost-effective, and convenient means for detecting Vibrio contamination, which is what we focused on. His input helped us to better focus our research and product idea on a kit that could be used in bacteria detection. While oyster pollution is undoubtedly a big issue, Dr. Rajan’s input helped us narrow our solution to something feasible and hopefully helpful to the current aquaculture industry.
+        </p>
+        <h3 id="fda">Dr. Jones - FDA Interview</h3> 
+        <p>
+          After meeting with Dr. Rajan, we found it necessary to meet with someone with experience in regulating specific processes and treatments of food. We met with Dr. Jones, who aside from being published in journals regarding oversight mechanisms and detection systems with qPCR, also works with the FDA. We wanted to learn more about the standard of detection and the current procedure for detecting oyster bacteria in food. The current FDA method only targets Vibrio vulnificus and other virulent strains, while we wanted to develop a kit that targeted three different types of Vibrio bacteria. Many kits on the market can detect the total populations, but only a few can detect virulent strains. However, all current methods require culturing the bacteria, which lengthens the procedure to a few days, and increases the cost. Dr. Jones proved incredibly helpful in learning about the current regulation methods. There are currently four processes that are approved in the US. However, ¾ of those processes leave the oyster dead, reducing shelf-life and interfering with the “freshness” standard of the oysters. Additionally, irradiation (which leaves oysters alive) can be expensive, and there is a lot of variation in the depuration and reduction. She also told us about the interest in testing capability among oyster farmers. This insight gave us a better understanding of the current regulation and testing methods and helped us understand the current gaps in the market. Furthermore, we asked her about our idea to develop a treatment system using AMPs in algae to reduce bacteria levels. Dr. Jones told us that unless the composition of oysters were altered, our idea would be usable in current markets. Finally, she gave us a lot more information about classifying foods as “organic” or “green” in different markets. Overall, Dr. Jones provided a lot of invaluable information about the current real-world detection systems in oysters around the world.
+        </p>
+        <h3 id="hksar">HKSAR Interview</h3> 
+        <p>
+          Our team realized that to fully grasp the effect of our detection kit, it was essential to understand the biological aspect of our product and the legal and consumer aspects. So, we discussed this project with Ms. Teresa Ma, the Fisheries Management Officer of the Agriculture, Fisheries and Conservation Department in Hong Kong. Through two effective and productive meetings, we understood the extent of our project. We learned that there is no license for oyster culture in Hong Kong and that tests typically are conducted through expensive commercial lab tests. In addition, the sustainable fisheries development fund from the Agriculture, Fisheries, and Conservation Department (AFCD), which assists oyster projects such as a depuration plant, was officially terminated last year. Furthermore, there are no compulsory measures for testing oyster imports through customs, yet tests and interviews are conducted physically to acquire data. Overall, Ms. Ma provided crucial information on how we target local oyster producers, helping us understand that our detection kit can lower testing costs and be efficient within the local oyster industry. 
+        </p>
+        <h3 id="next">Next Steps</h3> 
+        <p>
+          These interviews were constructive as they gave us insight into the pathogen we hoped to detect and crucial information into the technical aspect of the current systems in place, such as AMPs. A common theme we noticed mentioned from the interviews was the concept of the oyster industry being a “green” industry. For our detection system to be launched, we would have to learn more about the market scope and how various corporations deal with this green industry while adhering to necessary legal procedures. To accomplish this task, we re-met with the people we interviewed and new corporations to discuss our findings and compare similarities. 
+        </p>
+        <h2 id="stakeholder">Stakeholder Surveys and Interviews</h2> 
+        <p><h4>What were we looking for?</h4></p>
+        <p>
+          We discussed our potential detection system with possible stakeholders and corporations with experience in the oyster industry to determine whether we could launch our detection system. We hoped that through these meetings, we could understand the market we were working with and determine the needs of potential consumers. 
+        </p>
+        <h3 id="lee">Lee Kum Kee Interview</h3> 
+        <img src="../../static/media/images/T--HKIS--Lee_Interview.png">
+        <br>
+        <p>
+          To understand corporate views on our potential oyster detection design, we interviewed a Lee Kum Kee spokesperson. Lee Kum Kee is a Hong Kong-based food company that specializes in the production of oyster sauce. In our meeting to understand corporate values and regulations, we learned that most oyster imports within the Hong Kong oyster industry are from overseas, though specific details are confidential. In addition, there are several hundreds of tests oysters must go through before they are used in production and put into the market. Despite having lax local regulations, Lee Kum Kee has a series of company policies that minimize the threat of contamination. In our discussion of a possible cheaper and more efficient vibrio detection kit, we realized that neither company nor consumers would bear the price of the detection kit. Instead, the factories cover the price based on agreements between fishers and producers. The company believes that consumers focus less on oyster health than on other manufacturing aspects such as oyster quality and bottling. In addition to optimistic views of our detection kit, the concept of the “green” oyster industry was a recurring theme throughout the meeting, which helps us focus on specific solutions and design a detection kit that can fit oyster industry standards. 
+        </p>
+        <h2 id="wet-market">Wet-Market Surveys</h2> 
+        <img src="../../static/media/images/T--HKIS--Wet_Market.png">
+        <br>
+        <p>
+          One of Hong Kong’s distinguishing features is its wet markets. Here, we can see a variety of fresh seafood, recently imported from various locations across the globe. To better understand one of the primary locations consumers in Hong Kong receive their oysters, we traveled to various oyster selling wet market shops to survey and understand the local oyster industry and survey differences in these different markets. We noticed that most oysters were produced internationally, specifically in America, while a few other shops had production in China and Hong Kong (Lau Fau Shan). Compared to other major corporations we interviewed, a resounding majority of these shops only had the typical customs contamination treatment and rarely checked oyster health themselves. Especially with relatively lax coverage, there may have been instances of contamination. Indeed, when we inquired how they decided what oysters to purchase, many just purchased based on price and location/efficiency in arriving at the markets. About three-quarters of our sellers believed that this detection kit would be beneficial (as long as it was cheap and efficient) and would consider using it if it could increase consumer activity. However, every shop we visited said that they wouldn’t charge more for their oysters even if a test guaranteed they were clean. However, this was expected because wet markets, especially, run off of their low prices compared to restaurants and supermarkets. We believe that our detection kit in this potential area is extremely promising. However, the main factor would be the necessity to keep it affordable since wet market shop owners tend to favor efficiency and price in their produce. Our goal of visiting local markets and understanding how traditional oyster selling methods may differ from restaurant standards was visibly met, and we believe we can cater to this detection kit not just to restaurants but also to local sellers. We decided to relook at our system and see if we can add a hardware system for convenient incubation of reaction, which will make our product more of a complete package and more intuitive to use for the average consumer.
+        </p>
+        <h2 id="restraunt">Restraunt Survey</h2>
+        <p>
+          When understanding a retailer’s perspective, it is essential to note the full scale of all local businesses, not just those of wet markets and street shops. We wanted to develop a complete picture of all local oyster retail and consumption locations. So we reached out to a restaurant managed by the Shangri-La corporation to compare the differences in oyster regulations and possible pathogens. In this interview, we recognized that oysters are sourced locally (Lau Fau Shan) and globally, including Japan, Australia, New Zealand, and the US. Despite having limited local regulations to adhere to, these oyster products must pass ISO (international organization for standardization) 22000 certification and the Shangri-La food safety management system. In oysters specifically, inspectors go to local sellers to check hygiene and take note of their temperature and other such data. All food compartments are marked and labeled to be used by a specific date. Overall, we learned that, especially in big food corporations, many regulations and standards must be met to ensure that when consumers pay a high price for their food, their food is safe for consumption. However, we do note that their current systems employed for these means are costly and time-consuming. Restaurant managers can’t make any corporate decisions themselves. Still, in our interviews, they did articulate that an effective and cheap detection system could be beneficial, and further meetings with executives could be helpful to better understand the full extent of the detection kit’s impact. Through this interview, we wanted to learn about existing oyster contamination and food safety regulations in the corporate world. Instead of just this information, however, this interview also led us to fully understanding the possible need for a detection system and what corporate managers may be looking for. 
+        </p> 
+      </body>
+    </div>
+  </div>
+
+  <!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+  <footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <h1 style="margin-top: 1.5vh !important;">Special Thanks to Our Sponsors!</h1>
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 10.5vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="New England Biolabs"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 19vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Twist Bioscience"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 9.33vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+
+      <!-- Section: Form -->
+      <section>
+        <h3 class="contact">Contact Us</h3>
+        <h4 class="contact">igem.hshk@gmail.com</h3>
+      </section>
+      <!-- Section: Form -->
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+  <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
+  <script type="text/javascript" src="../../static/js/content.js"></script>
+</html>
