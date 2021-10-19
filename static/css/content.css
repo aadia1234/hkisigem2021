@@ -74,7 +74,7 @@
 }
 
 #text-content h2, h3:not(.contact), h4:not(.contact) {
-  padding-top: 5vh !important;
+  padding-top: 10vh !important;
   padding-bottom: 1.5vh !important;
   color: #7498d6 !important;
   margin-bottom: 0.5rem !important;
