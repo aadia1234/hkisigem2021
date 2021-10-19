@@ -79,7 +79,7 @@
   margin-bottom: 0.5rem !important;
 }
 
-#text-content p {
+#text-content p:not(.card-text) {
   font-size: 2rem;
   padding-bottom: 2.5vh !important;
   text-indent: 3.34rem;
