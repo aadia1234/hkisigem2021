@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 
-      Use replace "../../css" with "../../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
-      "../../" means the path (directory) of the parent folder - using "../../" in this html file will return the filepath of the "static folder"
+      Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+      "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
       https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
     -->
     <link type=text/css rel="stylesheet" href="../../static/css/bootstrap.min.css">
@@ -19,24 +19,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
   </head>
+    <style>
+        .card-group {
+        top: 100px;
 
-  <style>
-    #header h1 {
-      text-align: center !important;
-      background:
-          linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0, 0, 0, 0.5)
-        ),
-        url("../../static/media/images/T--HKIS--Entrepreneurship.jpg");
-      background-size: cover;
-      width: 100%;
-      padding: 42.5vmin 0 42.5vmin 0 !important;
-      font-size: 10rem;
-      margin-top: -5vh;
-      color: white !important;
-    }
-  </style>
+        }
+        .card {
+          display: block;
+          /* top: 0px; */
+          position: relative;
+          width: 100%;
+          background-color: #f2f8f9;
+          /* border-radius: 4px; */
+          padding: 2vh 2vh;
+          /* margin: 12px; */
+          /* text-decoration: none; */
+          z-index: 0;
+          /* overflow: hidden; */
+          border: 1px solid #f2f8f9;
+          /* text-justify: right; */
+          text-align: center;
+        }
+
+        .card-img-top{
+          width:100%;
+          display: block; 
+          /* border-radius: 25px; */
+        }
+        .card-body{
+          line-height:1.5;
+          padding: 0.5vh;
+          text-align: center;
+        }
+
+        .card button {
+          border-width: 0 !important;
+          padding: 0;
+        }
+
+        .card-body > p:first-of-type {
+          margin-top: 0;
+          text-indent: 0 !important;
+          text-align:center;
+          word-break: break-all;
+        }
+        .card-title{
+          padding-top: 0 !important;
+        }
+    </style>
+
 
   <div id="header">
     <h1 class="black">Engineering Success</h1>
@@ -51,80 +82,217 @@
           <br>
           <a class="nav-link active" href="#item-1">Optimizing the Lateral Flow Assay</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ms-4 my-0" href="#item-1-1">Iteration 1</a>
+            <a class="nav-link ms-5 my-0" href="#item-1-1">Iteration 1</a>
             <nav class="nav nav-pills flex-column">
               <a class="nav-link ms-5 my-0" href="#item-1-2">Research/Imagine</a>
               <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Design/Build/Test</a>
             </nav>
-            <a class="nav-link ms-4 my-0" href="#item-1-1">Iteration 2</a>
-            <nav class="nav nav-pills flex-column">
-              <a class="nav-link ms-5 my-0" href="#item-1-2">Research/Imagine</a>
-              <a class="nav-link ms-5 my-0" href="#item-1-2">Design</a>
-              <a class="nav-link ms-5 my-0" href="#item-1-2">Build/Test</a>
-              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn/Improve</a>
-            </nav>
-            <a class="nav-link ms-4 my-0" href="#item-1-1">Iteration 2</a>
-            <nav class="nav nav-pills flex-column">
-              <a class="nav-link ms-5 my-0" href="#item-1-2">Research/Imagine</a>
-              <a class="nav-link ms-5 my-0" href="#item-1-2">Design</a>
-              <a class="nav-link ms-5 my-0" href="#item-1-2">Build/Test</a>
-              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn/Improve</a>
-            </nav>
           </nav>
-          <a class="nav-link mb-4" href="#item-2">Item 2</a>
-          <a class="nav-link mb-4" href="#item-3">Item 3</a>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link ms-4 my-0" href="#item-3-1">Item 3-1</a>
-            <a class="nav-link ms-4 my-0 mb-4" href="#item-3-2">Item 3-2</a>
+            <a class="nav-link ms-5 my-0" href="#item-1-1">Iteration 2</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-5 my-0" href="#item-1-2">Research/Imagine</a>
+              <a class="nav-link ms-5 my-0" href="#item-1-2">Design</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Build/Test</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn/Improve</a>
+            </nav>
           </nav>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0" href="#item-1-1">Iteration 3</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-5 my-0" href="#item-1-2">Design</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Build/Test</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn/Improve</a>
+            </nav>
+          </nav>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0" href="#item-1-1">Iteration 4</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-5 my-0" href="#item-1-2">Research/Imagine</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Design</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Build/Test</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn</a>
+            </nav>
+          </nav>
+          <a class="nav-link" href="#item-2">Optimizing the Cas12a Ratio</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0" href="#item-1-1">Iteration 1</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-5 my-0" href="#item-1-2">Research/Imagine</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Design</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Build/Test</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn/Improve</a>
+            </nav>
+          </nav>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0" href="#item-1-1">Iteration 2</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Design</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Build/Test</a>
+              <a class="nav-link ms-5 my-0 mb-4" href="#item-1-2">Learn</a>
+            </nav>
+          </nav>
+          <a class="nav-link active" href="#item-1">Conclusion</a>
           <a class="nav-link" href="#sources">Sources</a>
         </nav>
       </nav>
     </div>
     <div id="text-content" class="col">
-      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
-        <h2 id="item-1">Item 1</h2>
+        <h5>Process</h5>
+      <div class="shadow" style="background-color:#c4dbd3; text-align:left; vertical-align: middle; padding:20px 47px;">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="position" data-bs-offset="0" tabindex="0">
+        <div class="card-group">
+          <div class="modal fade" id="designModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 style="font-size: 4vh; padding: unset !important;"class="modal-title" id="exampleModalLabel">Design</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 style="font-size: 2vh;">The design phase is the phase for implementing the knowledge gained from previous iterations into a new and improved product or experiment.<h6>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #D7B1BF;">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="researchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 style="font-size: 4vh; padding: unset !important;"class="modal-title" id="exampleModalLabel">Research/Imagine</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 style="font-size: 2vh;">The research and imagine phase is for researching a starting point for a new product. This is the phase where the initial prototype is conceived.<h6>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #D7B1BF;">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="buildModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 style="font-size: 4vh; padding: unset !important;"class="modal-title" id="exampleModalLabel">Build/Test</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 style="font-size: 2vh;">The Build/Test phase is for constructing the new experiment or product and testing to see whether the hypothesized design is successful or not.<h6>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #D7B1BF;">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="learnModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 style="font-size: 4vh; padding: unset !important;"class="modal-title" id="exampleModalLabel">Learn</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h6 style="font-size: 2vh;">The learn phase is for understanding, gaining more knowledge, and coming up with a solution for previously unsuccessful experiments. This phase is all about learning from past failures and improving the product or experiment.<h6>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #D7B1BF;">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#designModal"><img src="https://i.ibb.co/wRs4sR0/design.png" class="card-img-top" alt="..."></button>
+            <div class="card-body">
+              <h4 class="card-title">Design</h4>  
+              <!-- padding-top doesnt go away for h2, perhaps a custom h3 without top padding -->              
+            </div>
+          </div>
+          <div class="card">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#researchModal"><img src="https://i.ibb.co/74H8d1Y/build.png" class="card-img-top" alt="..."></button>
+            <div class="card-body">
+              <h4 style="white-space: pre-line" class="card-title">Research/ Imagine</h4>
+              <!-- padding-top doesnt go away for h2 -->              
+            </div>
+          </div>
+          <div class="card">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#buildModal"><img src="https://i.ibb.co/NtVv6Nb/test.png" class="card-img-top" alt="..."></button>
+            <div class="card-body">
+              <h4 class="card-title">Build/Test</h4>
+              <!-- padding-top doesnt go away for h2 -->              
+            </div>
+          </div>
+          <div class="card">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#learnModal"><img src="https://i.ibb.co/60dFZXq/learn.png" class="card-img-top" alt="..."></button>
+            <div class="card-body">
+              <h4 class="card-title">Learn</h4>
+              <!-- padding-top doesnt go away for h2 -->              
+            </div>
+          </div>
+          </div>
+        </div>
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="10" tabindex="0">
+        <h2 id="item-1">Optimizing the Lateral Flow Assay</h2>
           <p>Lorem ipsum <b>BOLD</b> <i><b>ITALICS</b></i> <a href="https://google.com">LINK</a> dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
             Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
             Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
           </p>
-        <h3 id="item-1-1">Item 1-1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+        <h3 id="item-1-1">Iteration 1</h3>
+        <h4 id="item-1-2">Research/Imagine</h4>
+          <p>When first exploring our idea for a portable detection system, we researched many different ways to display it. First and foremost, we wanted our detection system to be affordable and easy to use. We looked into multiple ways to display a result. We researched a fluorescence based visualization extensively. However, it would be impractical in on-field conditions due to the equipment required. We decided on a lateral flow assay. Not only do lateral flow assays display a clear one/two band result, but they also show varying band intensity levels for a rough estimate of bacteria concentration in the oyster. Additionally, this technology is expected to be somewhat intuitive for users, as it is also the display method used for pregnancy tests. </p> 
+        <h4 id="item-1-3">Design/Build/Test</h4>
+          <p>Our first test of the lateral flow assay was to determine the minimum concentration of Cas12a enzyme required to show a result. We created several tubes of reagents with different concentrations of Cas12a, and once they were prepared, we submerged our lateral flow assay dipsticks in them for our first test. However, we had a problem. While the assays showed a result, there was no change in the test (positive) band. Even the control sample showed a positive result. In the image below, you can see that from the left (high concentration) to the right (control), there is always a positive testing band, even though in control (farthest right), there shouldn’t be. The fact that even negative control LFAs resulted in positive results was a serious issue: we did not want our system to show false-positive results. We decided to investigate this issue to come up with a possible solution.</p>      
+        <h3 id="item-1-4">Iteration 2</h3>
+        <h4 id="item-2">Design</h4>
+          <p>Our central hypothesis for this result’s cause was that either the biotin was degraded/overflowed or the gold nanoparticles were oversaturated. We first decided to test for the degradation/overflow of biotin to rule it out as a cause.
+          </p>      
+        <h4 id="item-2-1">Build/Test</h4>
+          <p>Our test ended up showing similar results to the first one: there was minimal variation in concentrations, to the point where the 2 µL biotin tube had almost the same results as the 0.25 µL biotin tube. In this image, it is difficult to discern which assay was used with which concentration at first glance. We had to solve this issue since it would make using our kit very difficult, as it would be nigh-impossible to discern positive and negative results.
           </p>
-        <h4 id="item-1-2">Item 1-2</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+        <h4 id="item-2-2">Learn/Improve</h4>
+          <p>We realized that while the biotin might have degraded, it was more likely that the gold nanoparticles in the lateral flow assay were oversaturated. The oversaturation explained the strong results, even with lower concentrations of biotin or Cas12a. Now that we realized the issue was due to oversaturation, we had to find a way to reduce gold nanoparticle quantities.
+          </p> 
+        <h3 id="item-2-3">Iteration 3</h3>     
+        <h4 id="item-2-4">Design</h4>
+          <p>To combat the oversaturation of gold nanoparticles, we came up with the solution of physically cutting the lateral flow assay testing section. We thought that by reducing the amount of gold, we would reduce the strength of the result.
+          </p> 
+        <h4 id="item-3">Build/Test</h4>
+          <p>We took specific measurements and cut off the end of the test (where the gold particles were situated). We left one dipstick whole as a control, then cut off 8mm, 10mm, 12mm, and 14mm. We created five tubes of the same reagent mix for the experiment to evaluate the change in the results best. Our results were generally as expected (as seen in the image below). As the amount cut off increased, the brightness of the result decreased. However, it is clear from the image that this method was very crude, even though you can see a clarity gradient in the testing band. This was as expected since the gold nanoparticles play a significant role in the function of the lateral flow assay. 
           </p>      
-        <h2 id="item-2">Item 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+        <h4 id="item-3-1">Learn/Improve</h4>
+          <p>While we had a functional result, this method was still very unrefined. There had to be better solutions than just cutting each dipstick before use. We decided to continue researching to see if we could develop a more sophisticated method of improving the lateral flow assay.</p>      
+        <h3 id="item-3-2">Iteration 4</h3>
+        <h4 id="item-3-3">Imagine/Research</h4>
+          <p>We researched several different lateral flow assays and possible reasons for oversaturation and bright results. Finally, we came upon the idea to adjust the buffer viscosity of the lateral flow assay. We realized that by making the buffer more viscous, we could adjust how the reagents flowed up through the assay and possibly make the result more accurate.
           </p>      
-        <h2 id="item-3">Item 3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-          </p>      
-        <h3 id="item-3-1">Item 3-1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-          </p>      
-        <h3 id="item-3-2">Item 3-2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+        <h4 id="item-3-4">Design</h4>
+          <p>We decided to use polyethylene glycol (PEG) as our thickening agent for the buffer. Additionally, we consulted the Milenia protocols and reduced the amount of biotin used from 10 pmol to 5 pmol. We hoped that this alteration to the buffer would result in a more sophisticated solution to our problem.</p>
+        <h4 id="">Build/Test</h4>
+          <p>We first made the PEG buffer mix. For this experiment, we tested a 4% PEG concentration and a 5% PEG concentration. We made them by mixing 8000 weight PEG with TBS buffer and filling them to 10 mL. From there, we developed a controlled positive and negative result for each. A clear positive result and a clear negative result were expected for each. We also expected that the buffer viscosity would have an impact on the results.
           </p>
-          <div id="sources-div">
-            <h3 id="sources">Sources</h2>
-            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
-              Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
-              Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
-            </p>
-          </div>  
+        <h4 id="">Learn</h4>
+          <p>Our results were excellent. The controlled negative showed no testing band, and the controlled positive had an unmistakably clear positive band. We found that the 4% PEG had the best result, with an extremely clear positive and negative. We decided to move forward with the 4% PEG Assay buffer instead of the provided assay buffer we had been using previously. In the image below, the LFA on the left has no visible testing band, while the LFA on the right has a very clear positive testing band. We had finally optimized our lateral flow assay.</p>
+        <h2 id="">Optimizing the Cas12a Ratio</h2>
+        <h3 id="">Iteration 1</h3>
+        <h4 id="">Research/Imagine</h4>
+        <h4 id="">Design</h4>
+        <h4 id="">Build/Test</h4>
+        <h4 id="">Learn/Improve</h4>
+        <h3 id="">Iteration 2</h3>
+        <h4 id="">Design</h4>
+        <h4 id="">Build/Test</h4>
+        <h4 id="">Learn</h4>
+        <h2 id="">Conclusion</h2>
+          <h2 id="sources">Sources</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nisi. Duis ut pretium elit, ut ullamcorper sapien. Suspendisse potenti. Nulla ornare nec lacus vel aliquam. Phasellus pulvinar nec turpis vitae mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ex, lobortis ac neque ut, accumsan laoreet massa. Nunc rhoncus sapien non ultricies facilisis. Pellentesque quis tristique lacus, a mattis dolor. Fusce eget elit et neque pharetra tristique non in justo. In gravida nibh vitae nunc dignissim varius. Mauris nec ipsum malesuada, gravida libero eget, egestas sem. Nunc sed cursus turpis. Vestibulum nec bibendum urna. Vivamus augue quam, hendrerit sed magna id, dapibus egestas neque. Aliquam consequat pulvinar risus, et gravida felis pellentesque nec. Quisque quis venenatis est. Sed sed porttitor justo. Donec neque velit, sodales vel semper eget, pulvinar nec justo. Aenean eu velit pharetra, ornare erat eget, lacinia nibh. Nam vitae nisl eget diam aliquet posuere. Maecenas mollis gravida ante at egestas. Mauris libero metus, vestibulum sed odio id, ultrices tempor felis. Nam molestie lacus id quam sollicitudin accumsan. Suspendisse potenti. Praesent fringilla turpis eu lectus gravida dictum nec ut metus. Suspendisse finibus lacus tellus, eu blandit augue sagittis tristique. In lorem sapien, dapibus in tincidunt et, euismod non metus. Aliquam vehicula, ipsum non fermentum eleifend, ligula nisi lacinia nibh, nec bibendum leo nisl a metus.  
+            Maecenas eleifend, elit vitae efficitur scelerisque, orci turpis blandit magna, sit amet commodo enim nisi ac tellus. Praesent id pretium est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Praesent quis cursus libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec blandit quam vel urna posuere iaculis. Fusce non auctor metus. Suspendisse potenti. Praesent mollis ante at dapibus rutrum. Morbi faucibus, lacus et cursus interdum, tortor odio semper nisl, ut maximus arcu nibh in leo. Mauris tristique fringilla consequat. Fusce ut nulla pulvinar, egestas purus ac, maximus lacus. Etiam ac erat et tellus imperdiet molestie condimentum ac ligula. Etiam porta pulvinar odio sit amet egestas. Etiam metus nulla, tristique eget sem a, commodo convallis leo.  
+            Nam at sollicitudin quam. Phasellus diam justo, condimentum ut metus vitae, mattis condimentum neque. Aliquam sed eros sed tellus gravida tempor. Curabitur id lorem ut orci vestibulum hendrerit et id augue. Mauris id turpis sodales, tristique tellus sed, dignissim dui. In accumsan libero neque, vel accumsan elit consequat sed. Sed tristique semper condimentum. Ut pulvinar eget erat non imperdiet. Nullam metus augue, malesuada a venenatis sit amet, dignissim malesuada odio. Aenean ut magna at ligula ultricies bibendum. Nam nisl orci, placerat ut nibh pulvinar, condimentum vestibulum mi. Vestibulum in felis ac erat ultrices auctor at a sem. Nulla placerat posuere enim sed vestibulum.Proin quis ullamcorper tortor. Sed id nibh id sapien semper ullamcorper eu at lorem. Suspendisse risus nibh, egestas id vestibulum eget, vulputate eget velit. Integer non facilisis ante, at volutpat arcu. In sed molestie tortor, non iaculis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci turpis, cursus at feugiat ut, aliquet ut purus. Ut tincidunt augue et justo dapibus aliquet. Nam auctor risus eu justo feugiat, sit amet feugiat lacus aliquet. Pellentesque sagittis diam risus, et sollicitudin urna pretium eu.
+          </p> 
       </body>
     </div>
   </div>
@@ -199,9 +367,9 @@
       <!-- Section: Images -->
 
       <!-- Section: Form -->
-      <section>
-        <h3 class="contact">Contact Us</h3>
-        <h4 class="contact">igem.hshk@gmail.com</h3>
+      <section class="">
+        <h3>Contact Us</h3>
+        <h4>igem.hshk@gmail.com</h3>
       </section>
       <!-- Section: Form -->
 
