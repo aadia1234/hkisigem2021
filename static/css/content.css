@@ -37,7 +37,7 @@
 #sidebar-col {
   padding: 0 !important;
   max-width: inherit;
-  min-width: 20vw;
+  min-width: 22.5vw;
   background-color: #c4dbd3;
   z-index: 1;
 }
@@ -97,7 +97,8 @@
 }
 
 #sources-div p {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
+  text-indent: 0 !important;
 }
 
 footer h3, h4 {
