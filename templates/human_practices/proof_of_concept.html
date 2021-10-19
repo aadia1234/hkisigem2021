@@ -1,0 +1,342 @@
+<!-- {{ HKIS/base.html }} -->
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+      "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
+      https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
+    -->
+    <link type=text/css rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/base.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/content.css">
+    <!-- <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/content.css&action=raw&ctype=text/css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  </head>
+  <style>
+    #header h1 {
+      text-align: center !important;
+      background:
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../../static/media/images/T--HKIS--POC_HD.png");
+      background-size: cover;
+      width: 100%;
+      padding: 42.5vmin 0 42.5vmin 0 !important;
+      font-size: 10rem;
+      margin-top: -5vh;
+      color: white !important;
+    }
+  </style>
+<!-- {{ HKIS/base.html }} -->
+<nav id="navbar" class="shadow navbar sticky-top navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">HKIS iGEM 2020</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="https://google.com">
+            Home
+          </a>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="https://2021.igem.org/Team:HKIS/Description" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+        </li>
+
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Human_Practices">
+              Integrated Human Practices
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Implementation">
+              Proposed Implementation
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Entrepreneurship">
+              Entrepreneurship
+            </a>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Wet-Lab
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Engineering">
+              Engineering<br>Success
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Experiments">
+              Experiments
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Parts">
+              Parts
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Improvement_of_an_Existing_Part">
+              Improvement of an<br>Existing Part
+            </a>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dry-Lab
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Model">
+              Modeling
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Model">
+              Hardware
+            </a>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-hover dropdown dropdown-hover">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu fade-down shadow-lg" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Attributions">
+              Attributions
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Collaborations">
+              Collaborations
+            </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="https://2021.igem.org/Team:HKIS/Contribution">
+              Contribution
+            </a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div id="header">
+    <h1 class="black">Proof of Concept</h1>
+  </div>
+
+  <div id="content-row" class="row">
+    <!-- class += d-none -->
+    <div id="sidebar-col" class="col shadow-sm">
+      <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+        <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+          <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
+          <br>
+          <a class="nav-link active mb-4" href="#item-1">Introduction</a>
+          <a class="nav-link mb-4" href="#item-2">Social Engagement </a>
+          <a class="nav-link mb-4" href="#item-3">Wetlab - Kit Development</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-5 my-0" href="#item-3-1">Limits of Detection</a>
+            <a class="nav-link ms-5 my-0 mb-4" href="#item-3-2">Asymmetric Primers</a>
+          </nav>
+          <a class="nav-link mb-4" href="#item-4">Hardware</a>
+          <a class="nav-link mb-4" href="#item-5">Realistic Implementation</a>
+        </nav>
+      </nav>
+    </div>
+    <div id="text-content" class="col">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
+        <h2 id="item-1">Proof of Concept</h2>
+          <p> We determined the viability of our product in-field in multiple ways. Our detection system has uses in wet markets, restaurants, hotels, and other levels of the oyster production chain. Because of the large range of possible applications, we had to ensure that our detection system would function in different settings, environments, and contamination levels. In addition to the technical side of our proof of concept, we also conducted several interviews with several potential consumers throughout the course of our project. Additionally, we developed a portable incubator to ensure the functionality of our detection system in varying environmental temperatures. Overall, our holistic approach to developing a solid detection system gave us a functional solution that not only works in a lab but in its real-world context.
+          </p>
+        
+        <h2 id="item-2">Social Engagement - Target Consumers</h2>
+          <p>Throughout our project, we conducted several interviews with potential consumers, ranging from wet-market stall owners to restaurants to large-scale corporations. We conducted these interviews and surveys to gauge consumer interest in our product. This was another method we used to evaluate the viability of our product. The feedback we received on the practical applicability of our kit was very positive, as many wet market stall owners cited that our kit would see use provided that it was as affordable and cheap as we projected. They appreciated the intuitive and easy-to-use concept our kit possesses.
+          </p>
+          <p>We also interviewed many restaurant managers who further confirmed that our kit could be used in restaurants, specifically for screening batches of seafood. Many of the people we interviewed were also quick to understand that even though our kit is designed to detect oyster bacteria, it could also be applied to other kinds of seafood, which is what made our kit appealing to seafood restaurants that import a variety of seafood.
+          </p>
+          <p>Our interviews helped us refine a realistic implementation of our product, as they confirmed potential consumers of Vib-Check and confirmed that the potential consumers require our product. Overall, this helped expand our idea outside the limits of the lab and into the real-world market.
+          </p>
+        <h2 id="item-3">Wetlab - Kit Development</h2>
+        <h4 id="item-3-1" style = "margin-top: -5vh;">Limits of Detection</h4>
+          <p>To demonstrate that our kit is suitable for real-world situations, we must test its accuracy and reliability to the extremes. 
+            We decided to test the limits of our detection system by evaluating the amounts of templates that our system could detect. This experiment would entail adjusting concentrations of template DNA in the context of a full experiment, involving all parts of our kit, instead of isolating RPA or the Cas12a reaction. To run this experiment, we prepared our RPA mix and our Cas mix normally and essentially ran through our detection system. We then prepared eight tubes of the mix. In each tube, we scaled down the amount of template tenfold, with the eighth tube being a control trial that held no template. We calculated the number of templates by the number of copies per microliter. 
+          </p> 
+          <p>
+          We incubated the reaction for thirty minutes and recorded photos at 0, 5, 10, 20, and 30 minutes. The interval periods allowed us to gauge the level of brightness at different intervals. From our results, we were able to visualize the number of templates that our system could detect.
+        </p>
+          <p>
+              Altogether, this experiment helped us to determine the sensitivity of our kit. It further showed its potential use in a field situation, where the amount of Vibrio in a contaminated sample could vary. This experiment proved that Vib-Check had a vast scope of detection and is incredibly reliable for real-world application and use, as consumers would undoubtedly want to be aware of even the most minute quantities of Vibrio contamination in their oysters.
+          </p>
+             
+          <img style = "max-width: 90%"src= "../../static/media/images/T--HKIS--POC_Table.PNG" alt = "POC first table">
+          <br><br><br><br>
+          <img src="../../static/media/images/T--HKIS--POC_Picture.PNG" alt = "POC pic">
+        <h4 id="item-3-2">Asymmetric Primers</h4>
+          <p>One way we attempted to increase the sophistication of our experiment was through the use of an asymmetric ratio of primers. This experiment helped reduce the production costs for our kit. This cost reduction aligned with our goals of developing an affordable kit, which was a major factor we considered when designing our product. In this experiment, we attempted to increase the yield of ssDNA without increasing the use of the Cas12a enzyme. We aimed to reduce the cost of our detection kit. Rather than brute-force results in a crude method of overloading with reagents, we wanted to use asymmetric primers to increase our ssDNA yield. To do this, we tested different ratios of forward and reverse primers to find the best ratio of asymmetry. 
+          </p>
+            <p>
+              The first set of results below are from our first attempt at this experiment. We found that the 0.32F and 0.032R tubes had the best result, and generally, the lower concentration of forward and reverse primers had a better result than the higher concentrations. However, tube 3 had quite a strange result, so we wanted to retest our protocol. We concluded that the longer RPA duration with higher primer concentration led to more duplex strands and completed RPA; this isn’t beneficial for our project, as the goal is to maximize single strand template DNA for our gRNA due to the fact our gRNA is designed without considering PAM. Therefore, when we reran the experiment (results seen in the second photo), we incorporated shorter RPA incubation duration with universally higher primer concentrations to balance out duplex formation rate, which would hopefully be as low as the first experiment. With these changes, we got much brighter results that reflected the results seen in the first experiment. 
+
+          </p>
+          <p style = "margin-top: -1vh;">
+            First experiment results: 
+          </p><img src="../../static/media/images/T--HKIS--POC_Table2.PNG" alt = "POC table2">
+          <br><br><br><br><br><br>
+          <img src="../../static/media/images/T--HKIS--POC_Picture2.PNG" alt = "POC pic2">
+          <br><br><br>
+          <p>
+            Second experiment results:
+          </p><img src="../../static/media/images/T--HKIS--POC_Table3.PNG" alt = "POC table3">
+          <br><br><br><br><br><br>
+          <img src="../../static/media/images/T--HKIS--POC_Picture3.PNG" alt = "POC pic3">
+
+
+        <h2 id="item-4">Hardware - Sodium Acetate Incubator</h2>
+          <p>As one of our contributions, we developed and 3D-printed a sodium acetate-based incubator. This incubator is portable, relatively small in size, and is an excellent insulator. Not only that, our heat block is entirely reusable and environmentally friendly. Due to our system's wide range of potential applications, we wanted to develop an incubating system that would insulate at our target reaction temperature for an extended period. 
+
+          </p>
+          
+          <p>When developing our incubator, we had not only to consider insulation but also ease of use. The principle of ease of use is why activation of our incubator only requires a click of a trigger and a small slide to close. The focus of being a decent insulator is why the central chamber of our incubator possesses relatively thick walls.
+          </p>
+          <p>The heating portion of the incubator is a heat pack filled with sodium acetate solution and thus requires no electricity or external energy sources. The heat reaction is started by snapping a button inside the gel package and is entirely reusable. Once the reaction begins, a user has to place it inside the incubator and close the lid. With spaces for several tubes, this incubator can be used to run several tests at once. Considering our target audience could include stall owners at Hong Kong’s wet markets, where the temperature largely fluctuates in the outdoor environment, or a restaurant that maintains cooler indoor temperatures, we developed this system to take up very little space and maintain stable temperatures.
+        </p>
+        <img src="../../static/media/images/T--HKIS--POC_Graph.PNG" alt = "POC graph">
+          <br><br><br>
+          <p>
+            The graph demonstrates that our kit can maintain a stable temperature within the 37 to 39*C temperature range for a whole 33 minutes, more than enough for reaction. This demonstrates that the incubator can sustain the optimal temperature range for the entire duration of the RPA and CRISPR Cas12a reaction duration, which proves that our incubator functions as intended.
+
+          </p>
+        <h2 id="item-5">Wetlab - Kit Realistic Implementation - Detection with Vibrio Genome</h2>
+          <p>After running our experiments with a DNA template designed to complement our guide RNA, we decided to put everything together in a final proof of concept experiment with real Vibrio bacterial DNA. In this experiment, we ran a thorough experiment using all individual components of our kit, including the incubator.
+          </p> 
+            <p>
+              We performed the experiment with real Vibrio and a control species of bacteria unrelated to Vibrio and ran through the procedures we designed for our kit to be used. The real Vibrio bacteria were isolated with extreme care by our mentor Kenneth Ng, an HKU iGEM team member. The experiments performed were under intense scrutiny and supervision to ensure we took proper safety precautions so that there would be no risk of skin or lab contamination. 
+
+            </p>
+            <img src="../../static/media/images/T--HKIS--POC_Picture6.jpeg" alt = "POC pic6">
+            <br><br><br>
+            <p>
+              This image shows eight agarose plates covered with green colonies of Vibrio. Due to all documentation depicting most species of Vibrio possessing characteristic green coloration in plated colonies, we knew immediately that our isolated colonies were Vibrio. However, we ran several gels to make sure that the colonies we isolated were Vibrio. The colony used as the positive control in our experiment came from one of these plates. 
+          </p>
+          <p>When running our experiment, we used our dipstick-lysis buffer solution system to purify bacterial genomic DNA, and we used our 3D-printed sodium acetate incubator to incubate the RPA and Cas12a reaction. We decided to incubate the reaction in our incubator, rather than using lab machinery, to mimic the actual conditions of kit use. This experiment was an excellent way to demonstrate the application of the kit in the field scenarios without access to lab machinery. 
+          </p>
+          <img src="../../static/media/images/T--HKIS--POC_Picture4.PNG" alt = "POC pic4">
+          <br><br><br><br>
+          <img src="../../static/media/images/T--HKIS--POC_Picture5.PNG" alt = "POC pic5">
+          <p>The final result demonstrated distinct positive and negative results for our positive and negative control experiments. Our positive control contained Vibrio bacteria, and our negative control contained non-Vibrio bacteria. The figure on the left demonstrates the correct results on a Lateral Flow Assay, which is what we expect our results to look like in a consumers' hands. The positive and negative results on the lateral flow assays are both very distinct, which is an excellent illustration of the functionality and ease of interpretation of the results displayed by our kit. The fluorescence-based visualization of the result (the right image with the control in the right tube) is further proof that our kit can detect the presence of real Vibrio bacteria in a sample solution or mixture.
+          </p>
+         
+          
+          <div id="sources-div">
+            <h3 id="sources">Sources</h3>
+            <p style= "text-indent: 0 !important" class="light">1. “Final Diagnosis -- A 77 Year-Old Male Infected with Vibrio Vulnificus and Campylobacter Jejuni.” Final Diagnosis -- Case 583, path.upmc.edu/cases/case583/dx.html#:~:text=vulnificus produce a blue-green,are classified with the fermenters.
+            </p>
+          </div>  
+      </body>
+    </div>
+  </div>
+
+  <!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+  <footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <h1 style="margin-top: 1.5vh !important;">Special Thanks to Our Sponsors!</h1>
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 10.5vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="New England Biolabs"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 19vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Twist Bioscience"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 9.33vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+
+      <!-- Section: Form -->
+      <section>
+        <h3 class="contact">Contact Us</h3>
+        <h4 class="contact">igem.hshk@gmail.com</h3>
+      </section>
+      <!-- Section: Form -->
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+  <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
+  <script type="text/javascript" src="../../static/js/content.js"></script>
+</html>
