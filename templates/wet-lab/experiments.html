@@ -1,0 +1,172 @@
+<!-- {{ HKIS/base.html }} -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      Use replace "../css" with "../static/css" if you are using this code outside of playground.html - similar structure with other types of files as well.
+      "../" means the path (directory) of the parent folder - using "../" in this html file will return the filepath of the "static folder"
+      https://stackoverflow.com/questions/19977506/selecting-a-parent-directory-in-html - more information available here 
+    -->
+    <link type=text/css rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/base.css">
+    <link type=text/css rel="stylesheet" href="../../static/css/content.css">
+    <!-- <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/content.css&action=raw&ctype=text/css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <style>
+    #header h1 {
+      text-align: center !important;
+      background:
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../../static/media/images/T--HKIS--Experiments_Banner.jpeg");
+      background-size: cover;
+      width: 100%;
+      padding: 42.5vmin 0 42.5vmin 0 !important;
+      font-size: 10rem;
+      margin-top: -5vh;
+      color: white !important;
+    }
+  
+    embed {
+      width: 100%;
+      min-height: 100vh;
+    }
+  </style>
+
+  <div id="header">
+    <h1 class="black">Experiments</h1>
+  </div>
+
+  <div id="content-row" class="row">
+    <!-- class += d-none -->
+    <div id="sidebar-col" class="col shadow-sm">
+      <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+        <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+          <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
+          <br>
+          <a class="nav-link active" href="#item-1">Experiments Background</a>  
+          <a class="nav-link mb-4" href="#item-2"> Protocols</a>
+          <a class="nav-link" href="#item-3">Results</a>
+          <a class="nav-link" href="#sources">Sources</a>
+        </nav>
+      </nav>
+    </div>
+    <div id="text-content" class="col">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
+        <h2 id="item-1">Experiments Background</h2>
+          <p> The main goal of all of our experiments was to create and further refine our detection system and procedure. Due to the intricate nature of all of the reagents involved, it took many experiments and attempts to find the ideal combination that would lead to a highly functioning, compact kit. Furthermore, we also had to be very, very specific with the actual procedure involved in making the various solutions. We had to be very careful and thorough with all of our experiments. </p>
+          <p> To summarize our experimental process, we essentially conducted repeated and various experiments with different concentrations and proportions of the various reagents involved in our detection system. For instance, in situations where there was a false positive result, we were forced to creatively problem-solve to see what specific component was causing the issue. Many cases like this occurred in the context of a larger engineering process. However, in the end, after no small amount of hard work and elbow grease, we were able to create a final proof of concept procedure.          </p>
+          <p> Our proof of concept final experiment procedure was the culmination of months of painstaking work and combined various protocols into our final product. By incorporating the various aspects of our experimental work, we were able to create an LFA detection system that can detect the presence of Vibrio bacteria in a given sample with a high degree of accuracy. The following two embedded PDFs contain our log of experiment protocols, as well as their corresponding results.           </p>
+
+        <h2 id="item-2"> Protocols</h2>
+          <!-- Embedded PDF Here --> 
+          <embed type="application/pdf" src="../../static/media/pdfs/T--HKIS--Protocol_List.pdf">
+        <h2 id="item-3"> Results</h2>
+          <!-- Embedded PDF Here -->
+          <embed type="application/pdf" src="../../static/media/pdfs/T--HKIS--Results_List.pdf">
+      <h2 id="sources"> Sources </h2>
+      <p class="light">“Science Lab Stock Photos and Images.” 123RF Stock Photos, www.123rf.com/stock-photo/science_lab.html?sti=lt80aov1gdfxdwl4bs%7C.</p>
+      </body>
+    </div>
+  </div>
+
+  <!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+  <footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <h1 style="margin-top: 1.5vh !important;">Special Thanks to Our Sponsors!</h1>
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 10.5vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="New England Biolabs"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 19vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Twist Bioscience"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 9.33vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+              />
+              <!-- <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.2);"
+                ></div>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+
+      <!-- Section: Form -->
+      <section>
+        <h3 class="contact">Contact Us</h3>
+        <h4 class="contact">igem.hshk@gmail.com</h3>
+      </section>
+      <!-- Section: Form -->
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+  <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
+  <script type="text/javascript" src="../../static/js/content.js"></script>
+</html>
