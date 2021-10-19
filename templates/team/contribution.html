@@ -27,7 +27,7 @@
           rgba(0, 0, 0, 0.5), 
           rgba(0, 0, 0, 0.5)
         ),
-        url("../../static/media/images/T--HKIS--contributionsBanner.jpeg");
+        url("../../static/media/images/T--HKIS--Contribution_Banner.jpg");
       background-size: cover;
       width: 100%;
       padding: 42.5vmin 0 42.5vmin 0 !important;
@@ -49,7 +49,7 @@
   </style>
 
   <div id="header">
-    <h1 class="black"> Contributions </h1>
+    <h1 class="black">Contribution</h1>
   </div>
 
   <div id="content-row" class="row">
@@ -59,7 +59,8 @@
         <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
           <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
           <br>
-          <a class="nav-link active" href="#item-1">Hardware</a>
+          <a class="nav-link active" href="#intro">Introduction</a>
+          <a class="nav-link" href="#item-1">Hardware</a>
           <a class="nav-link mb-4" href="#item-2"> Software</a>
           <a class="nav-link" href="#sources">Sources</a>
         </nav>
@@ -67,7 +68,7 @@
     </div>
     <div id="text-content" class="col">
       <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
-        <br> <br> <br> <br> 
+        <h2 id="intro">Introduction</h2>
           <p>For our contributions to future teams, we have designed a 3D model for a 3D printable solution incubator that is intuitive to use and does not incorporate any electronics. Besides this, we have also developed a program for the mass generation of template-based mutations for antimicrobial peptides based on current research into peptide amphipathicity and structure. The outputted results are intended to be used in conjunction with a mass-input machine learning model for efficacy prediction and peptide optimization. </p>
       
         <h2 id="item-1">Hardware</h2>
@@ -76,30 +77,23 @@
             <img class="shadow-sm" src="../../static/media/images/T--HKIS--contributionFigure1.jpeg" width="500px" height="275px">
            <br>
            <br>
-           <br>
             <p style="text-align:center;" id="figure1"> Figure 1: Graph of internal </p>
           </div>
           <p>As seen in the graph, our system can maintain a stable temperature from 37 to 39°C for more than 33 minutes, suitable for any short to medium-length incubation period.</p> 
-          <p> Overall, the reusable nature of the heat block makes it not only more affordable but also ideal for field conditions, regardless of the weather or environmental temperature. The temperature consistency removes the potential variability of incubation and further eliminates the need for heating equipment outside of the kit. This heat block is user-friendly, with a snap-tag that can be flipped to activate the sodium acetate reaction. This incubator could undoubtedly have other applications outside of our detection system, in various regions of the world, and other areas of field experimentation.<p>
+          <p>Overall, the reusable nature of the heat block makes it not only more affordable but also ideal for field conditions, regardless of the weather or environmental temperature. The temperature consistency removes the potential variability of incubation and further eliminates the need for heating equipment outside of the kit. This heat block is user-friendly, with a snap-tag that can be flipped to activate the sodium acetate reaction. This incubator could undoubtedly have other applications outside of our detection system, in various regions of the world, and other areas of field experimentation.<p>
           
           <h2 id="item-2"> Software </h2>
           <p>For our software contribution, we designed a program that outputs all near-optimal variations of an antimicrobial peptide sequence, provided that appropriate inputs are provided. The outputs of our software take into account amino acid properties and their correlating positions to generate near-optimal variations of the peptide.
           </p>
-          <p>  For peptides that possess a beta-sheet structure, vital structure positions and turning amino acid positions are required. After the input is made, each amino acid within the peptide is classified according to its properties and effect on its antimicrobial ability. The classification is then reordered to optimize the peptide based on an ideal alternating amphipathic sequence researched with great detail <a href="https://www.sciencedirect.com/science/article/abs/pii/S1748013221001547?dgcid=rss_sd_all"> here. </a> </p>      
-        <p> The output file is titled out.FASTA will contain a high quantity of generated peptide sequences. These peptides are variants of the base peptide. Each variant will possess the indicated amount of residue mutations. Out.FASTA is designed to be used with the AxPEP sequence-based machine learning models, specifically with the RF-AmPEP30 model. This machine learning model can take massive quantities of peptide sequences and output a predicted peptide score based on their data. The machine learning model may be found <a href="https://app.cbbio.online/ampep/home"> here. </a></p>
-          <p>  The link to our software contribution is here (HYPERLINK THE HERE) </p>
+          <p>For peptides that possess a beta-sheet structure, vital structure positions and turning amino acid positions are required. After the input is made, each amino acid within the peptide is classified according to its properties and effect on its antimicrobial ability. The classification is then reordered to optimize the peptide based on an ideal alternating amphipathic sequence researched with great detail <a href="https://www.sciencedirect.com/science/article/abs/pii/S1748013221001547?dgcid=rss_sd_all"> here. </a> </p>      
+          <p>The output file is titled out.FASTA will contain a high quantity of generated peptide sequences. These peptides are variants of the base peptide. Each variant will possess the indicated amount of residue mutations. Out.FASTA is designed to be used with the AxPEP sequence-based machine learning models, specifically with the RF-AmPEP30 model. This machine learning model can take massive quantities of peptide sequences and output a predicted peptide score based on their data. The machine learning model may be found <a href="https://app.cbbio.online/ampep/home"> here. </a></p>
+          <p>The link to our software contribution is <a href="https://github.com/gam3boy1/AMPImprovement">here</a></p>
         
           <div id="sources-div">
-            <h3 id="sources">Sources</h2>
-            <p>
-              https://www.sciencedirect.com/science/article/abs/pii/S1748013221001547?dgcid=rss_sd_all
+            <h2 id="sources">Sources</h2>
+            <p class="thin">
+              Zaringhalam, Maryam. “An Experiment That Didn't Work.” Scientific American Blog Network, Scientific American, 13 Oct. 2017, blogs.scientificamerican.com/observations/an-experiment-that-didnt-work/.
             </p>
-            <p> 
-              https://app.cbbio.online/ampep/home
-          </p>
-          <p> 
-              Image: https://www.google.com/url?sa=i&url=https%3A%2F%2Fblogs.scientificamerican.com%2Fobservations%2Fan-experiment-that-didnt-work%2F&psig=AOvVaw2dZ0ouqDhKs6vAat_YIrWV&ust=1634664446458000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjVj8W-1PMCFQAAAAAdAAAAABA1
-          </p>
           </div>  
       </body>
     </div>
@@ -195,5 +189,5 @@
   <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
   <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
   <!-- <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script> -->
-  <script type="text/javascript" src="../static/js/content.js"></script>
+  <script type="text/javascript" src="../../static/js/content.js"></script>
 </html>
