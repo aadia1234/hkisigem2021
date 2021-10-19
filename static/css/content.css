@@ -83,8 +83,8 @@
   font-size: 2rem;
   padding-bottom: 2.5vh !important;
   text-indent: 3.34rem;
-  text-align: justify;
-  text-justify: auto;
+  /* text-align: justify;
+  text-justify: auto; */
 }
 
 #text-content .link {
