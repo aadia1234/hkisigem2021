@@ -31,6 +31,47 @@
       margin-top: -5vh;
       color: white !important;
     }
+
+    #educationSlideshow {
+      position: relative;
+      margin: 5vh auto 5vh auto;
+      width: 100%;
+      height: 70%;
+      background-color: #d9efff !important;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+      height: fit-content;
+      width: 5vw;
+      margin: auto;
+      z-index: 999;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+      padding: 2vh;
+    }
+
+    .carousel-inner img {
+      margin: auto;
+      height: 90%;
+    }
+
+    .carousel-indicators {
+      position: relative;
+      bottom: 5vh;
+      z-index: 999;
+      height: 0vh;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      position: relative;
+      width: 1.5vh;
+      height: 1.5vh;
+      border-radius: 100%;
+      margin-left: 5vh;
+      margin-right: 5vh;
+      bottom: 1vh;
+    }
   </style>
 
   <div id="header">
@@ -59,6 +100,35 @@
           <p>
             Our main focus, however, was to inspire entrepreneurial students and help them kick start any project ideas they have with a basic 4 step plan: 1. Identify an issue. 2. Conduct surveys and interviews to gauge issue importance. 3. Design a solution. 4. Interview target demographic for their opinion. We demonstrated how we used this process in our own project by identifying how we approached each step and its results on our project.
           </p>
+
+          <!-- Add slideshow - 3 images -->
+          <div id="educationSlideshow" class="shadow-lg bg-body rounded-3 carousel slide" data-bs-ride="carousel">
+            <div class="shadow-lg carousel-inner rounded-3">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img class="d-block w-100 img-fluid rounded-3" src="../../static/media/images/T--HKIS--education1.JPG" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-fluid rounded-3" src="../../static/media/images/T--HKIS--education2.JPG" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-fluid rounded-3" src="../../static/media/images/T--HKIS--education3.JPG" alt="Third slide">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#educationSlideshow" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#educationSlideshow" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#educationSlideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#educationSlideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#educationSlideshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+          <br><br><br><br>
           <p>
             The presentation was a success. We had a good turnout with many people attending, with a very nice split between STEM and non-STEM oriented students. In addition, we were able to answer several questions about the importance of good human practices, the brainstorming and research process, and different ways to reach out to experts and other stakeholders. This was a very positive experience for our team and was a great way to pass on some of our experiences to others interested in developing new products to solve problems. 
           </p>

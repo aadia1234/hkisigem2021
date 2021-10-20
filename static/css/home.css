@@ -31,6 +31,7 @@
   position: relative;
   bottom: 5vh;
   z-index: 999;
+  height: 0vh;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -136,8 +137,8 @@
   left: 0;
 }
 
-.info-anchor {
-  position: absolute;
+#info-container .row .info-anchor {
+  position: relative;
   width: 40vw;
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.33);
@@ -146,36 +147,45 @@
   overflow-wrap: normal;
   text-align: center;
   z-index: 999;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.info-anchor h1 {
+#info-container .row .col img {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* width: 25vw; */
+  height: 38vh;
+}
+
+#info-container .row .col {
+  /* padding-bottom: 50vh; */
+  height: 90vh;
+}
+
+#info-container .row .text h1 {
   font-size: 4.5rem;
   margin-top: -4.5vh;
   margin-bottom: 4.5vh !important;
 }
 
-.info-anchor p {
+#info-container .row .text p {
   font-size: 2rem !important;
 }
 
-#info-1 {
-  left: 6vw;
-  top: 20vh;
+#info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-#info-2 {
-  right: 6vw;
-  top: 100vh;
-}
-
-#info-3 {
-  left: 6vw;
-  top: 180vh;
-}
-
-#info-4 {
-  right: 6vw;
-  top: 260vh;
+#info-container .row {
+  width: 100vw;
 }
 
 @keyframes bubblesAnimation {

@@ -108,9 +108,9 @@
   <!-- 3 textboxes on the sea animation (left, right, left) -->
   <!-- Sillhouete drawing at the bottom of the sea -->
   <body>
-    <div id="introSlideshow" class="shadow-lg bg-body rounded-3 carousel slide" data-ride="carousel">
+    <div id="introSlideshow" class="shadow-lg bg-body rounded-3 carousel slide" data-bs-ride="carousel">
       <div class="shadow-lg carousel-inner rounded-3">
-        <div class="carousel-item active">
+        <div class="carousel-item active" data-bs-interval="5000">
           <img class="d-block w-100 img-fluid rounded-3" src="../static/media/images/T--HKIS--Team_Photo.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
@@ -132,8 +132,6 @@
         <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#introSlideshow" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
     </div>
 
@@ -154,38 +152,65 @@
         </div>
       </div>
       <section id="info">
-        <div id="info-1" class="info-anchor shadow-lg">
-          <h1 class="medium">Context: Vibrio</h1>
-          <p class="light">
-            Across the world, Vibrio pathogens are becoming increasingly prevalent in seafood, specifically bivalves and oysters. 
-            In fact, there are more than <b>80,000</b> people being infected by Vibrio-related bacterium, and an estimated <b>100</b> Vibrio-caused 
-            deaths each year, which amounts to <b>95%</b> of all seafood-related deaths.
-          <p>
+        <div id="info-container" class="container">
+          <div class="row row-cols-2">
+            <div class="col text">
+              <div class="info-anchor shadow">
+                <h1 class="medium">Context: Vibrio</h1>
+                <p class="light">
+                  Across the world, Vibrio pathogens are becoming increasingly prevalent in seafood, specifically bivalves and oysters. 
+                  In fact, there are more than <b>80,000</b> people being infected by Vibrio-related bacterium, and an estimated <b>100</b> Vibrio-caused 
+                  deaths each year, which amounts to <b>95%</b> of all seafood-related deaths.
+                <p>
+              </div>
+            </div>
+            <div class="col">
+              <img class="img-fluid shadow rounded-3" src="../static/media/images/T--HKIS--overview1.jpg">
+            </div>
+            <div class="col">
+              <img class="img-fluid shadow rounded-3" src="../static/media/images/T--HKIS--overview2.jpg">
+            </div>
+            <div class="col text">
+              <div class="info-anchor shadow">
+                <h1 class="medium">Problem: Cost</h1>
+                <p class="light">
+                  Unfortunately, as all current methods of Vibrio detection rely on the use of <b>expensive thermocycling machines</b>, 
+                  there is no cheap, quick, and effective method to determine if oysters are clean. Additionally, there are no oyster 
+                  contamination purification methods capable of killing pathogens without killing the oysters in the process.
+                <p>
+              </div>
+            </div>
+            <div class="col text">
+              <div class="info-anchor shadow">
+                <h1 class="medium">Solution: Point-of-care Detection – Vib-check</h1>
+                <p class="light">
+                  Our team’s solution for the lack of viable detection methods is a Vibrio detection kit that relies on a novel <b>isothermal amplification method</b>
+                  in conjunction with the highly specific enzyme <b>CRISPR Cas12a</b> for the rapid and accurate detection 
+                  of minuscule Vibrio DNA signals.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <img class="img-fluid shadow rounded-3" src="../static/media/images/T--HKIS--overview3.jpg">
+            </div>
+            <div class="col">
+              <img class="img-fluid shadow rounded-3" src="../static/media/images/T--HKIS--overview4.jpeg">
+            </div>
+            <div class="col text">
+              <div class="info-anchor shadow">
+                <h1 class="medium">Solution: Antimicrobial Peptide Purification</h1>
+                <p class="light">
+                  Besides detection, another large part of the issue with Vibrio contamination in oysters is the lack of sufficient purification methods. 
+                  Our solution is using algae – natural oyster feed used in aquacultures to feed oysters – to express highly effective <b>anti-Vibrio antimicrobial peptides</b>
+                  for eliminating Vibrio contamination in fresh samples, or contamination remaining from current purification methods.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="info-2" class="info-anchor shadow-lg">
-          <h1 class="medium">Problem: Cost</h1>
-          <p class="light">
-            Unfortunately, as all current methods of Vibrio detection rely on the use of <b>expensive thermocycling machines</b>, 
-            there is no cheap, quick, and effective method to determine if oysters are clean. Additionally, there are no oyster 
-            contamination purification methods capable of killing pathogens without killing the oysters in the process.
-          <p>
-        </div>
-        <div id="info-3" class="info-anchor shadow-lg">
-          <h1 class="medium">Solution: Point-of-care Detection – Vib-check</h1>
-          <p class="light">
-            Our team’s solution for the lack of viable detection methods is a Vibrio detection kit that relies on a novel <b>isothermal amplification method</b>
-            in conjunction with the highly specific enzyme <b>CRISPR Cas12a</b> for the rapid and accurate detection 
-            of minuscule Vibrio DNA signals.
-          </p>
-        </div>
-        <div id="info-4" class="info-anchor shadow-lg">
-          <h1 class="medium">Solution: Antimicrobial Peptide Purification</h1>
-          <p class="light">
-            Besides detection, another large part of the issue with Vibrio contamination in oysters is the lack of sufficient purification methods. 
-            Our solution is using algae – natural oyster feed used in aquacultures to feed oysters – to express highly effective <b>anti-Vibrio antimicrobial peptides</b>
-            for eliminating Vibrio contamination in fresh samples, or contamination remaining from current purification methods.
-          </p>
-        </div>
+        
+        
+        
       </section>
       <img id="sea-background" src="https://2021.igem.org/wiki/images/1/1b/T--HKIS--oyster_background.svg"></img>
     </section>

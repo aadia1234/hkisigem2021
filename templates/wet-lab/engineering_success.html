@@ -46,12 +46,12 @@
         text-align: center;
       }
 
-      .card-img-top {
+      .card-img {
         width:100%;
         display: block; 
       }
       .card-body{
-        line-height:1.5;
+        line-height: 1.5rem;
         padding: 0.5vh;
         text-align: center;
       }
@@ -59,6 +59,7 @@
       .card button {
         border-width: 0 !important;
         padding: 0;
+        margin-bottom: 5vh;
       }
 
       .card-body > p:first-of-type {
@@ -67,14 +68,21 @@
         text-align:center;
         word-break: break-all;
       }
+
       .card-title{
         padding-top: 0 !important;
+      }
+
+      h4 {
+        padding-top: 3.5vh !important;
+        padding-bottom: 0.5vh !important;
       }
     </style>
 
 
   <div id="header">
     <h1 class="black">Engineering Success</h1>
+    <!-- swap build and research images -->
   </div>
 
   <div id="content-row" class="row">
@@ -104,7 +112,7 @@
     <div id="text-content" class="col">
       <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="10" tabindex="0">
         <h2 id="flow">Optimizing the Lateral Flow Assay</h2>
-        <br>
+        <br><br><br><br><br>
         <div class="shadow" style="background-color:#c4dbd3; text-align:left; vertical-align: middle; padding:20px 47px;">
           <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="position" data-bs-offset="0" tabindex="0">
             <div class="card-group">
@@ -173,28 +181,28 @@
                 </div>
               </div>
               <div class="card">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#designModal"><img src="https://i.ibb.co/wRs4sR0/design.png" class="card-img-top" alt="..."></button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#designModal"><img src="https://i.ibb.co/wRs4sR0/design.png" class="card-img" alt="..."></button>
                 <div class="card-body">
                   <h4 class="card-title">Design</h4>  
                   <!-- padding-top doesnt go away for h2, perhaps a custom h3 without top padding -->              
                 </div>
               </div>
               <div class="card">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#researchModal"><img src="https://i.ibb.co/74H8d1Y/build.png" class="card-img-top" alt="..."></button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#researchModal"><img src="https://i.ibb.co/NtVv6Nb/test.png" class="card-img" alt="..."></button>
                 <div class="card-body">
                   <h4 style="white-space: pre-line" class="card-title">Research/ Imagine</h4>
                   <!-- padding-top doesnt go away for h2 -->              
                 </div>
               </div>
               <div class="card">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#buildModal"><img src="https://i.ibb.co/NtVv6Nb/test.png" class="card-img-top" alt="..."></button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#buildModal"><img src="https://i.ibb.co/74H8d1Y/build.png" class="card-img" alt="..."></button>
                 <div class="card-body">
                   <h4 class="card-title">Build/Test</h4>
                   <!-- padding-top doesnt go away for h2 -->              
                 </div>
               </div>
               <div class="card">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#learnModal"><img src="https://i.ibb.co/60dFZXq/learn.png" class="card-img-top" alt="..."></button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#learnModal"><img src="https://i.ibb.co/60dFZXq/learn.png" class="card-img" alt="..."></button>
                 <div class="card-body">
                   <h4 class="card-title">Learn</h4>
                   <!-- padding-top doesnt go away for h2 -->              
@@ -274,9 +282,17 @@
         <p>
           We essentially ran the same experiment except with an altered negative control and Cas12a quantity. We again ran it with fluorescence to have a point of reference against our previous results. However, we also ran it using the lateral flow assay. Our negative control for the fluorescence had no RPA FQ, while the LFA had no RPA Biotin. From this, we were able to see how this reaction displayed in our actual testing kit. In the image below, the LFA and the FQ setup clearly show negative and positive results similar to the previous experiment.
         </p>
-        <img src="../../static/media/images/T--HKIS--Engineering_Success_6.png">
-        <br><br>
-        <img src="../../static/media/images/T--HKIS--Engineering_Success_7.png">
+        <!-- make them side by side -->
+        <p></p>
+        <div class="container">
+          <div class="row">
+            <div class="col justify-content-center" style="margin: auto;"><img width="53.25%" src="../../static/media/images/T--HKIS--Engineering_Success_6.png">
+            </div>
+            <div class="col justify-content-center" style="margin: auto;"><img src="../../static/media/images/T--HKIS--Engineering_Success_7.png">
+            </div>
+          </div>
+        </div>
+        <p></p>
         <h4>Learn</h4>
         <p>
           Our results were excellent. The lateral flow dipstick experiment was purely cosmetic, and was kept to determine whether the issue lied with fluorescence or lateral flow assay. We found that the brightness was the same after five minutes, while the controls in both the fluorescence and the LFA showed negative results (with no brightness or testing band). We therefore realized that the brightness was due to use of abnormally high concentrations of fluorescent-quenchers. Our positive result for the fluorescence was similarly bright after five to ten minutes, proving that our previous results accurately represented the experiment. These results also showed a clear testing band on the lateral flow assay. Overall, the accuracy and success of this experiment ensured that we had found the optimal ratio of Cas12a to RPA, which would be used in all later builds of our experiments. 
