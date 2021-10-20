@@ -1,5 +1,6 @@
 const navbar = $("#navbar"), boldText = $("b"), linkText = $("#text-content a"), headerText = $("h2"), subHeaderText = $("h3:not(.contact)"), 
-subSubHeaderText = $("h4:not(.contact)"), bodyText = $("p"), navText = $("#sidebar .nav-link"), images = $("img:not(footer img)"), cards = $("profile wrapper");
+subSubHeaderText = $("h4:not(.contact)"), bodyText = $("p"), navText = $("#sidebar .nav-link"), images = $("img:not(footer img, .card-img-top)"), profileImages = $(".member_card"),
+cards = $("profile wrapper");
 const screenSizes = "d-xxl-block d-xl-block d-lg-block d-md-block";
 
 for (let t of boldText) {
@@ -45,6 +46,10 @@ for (let t of images) {
 }
 
 for (let t of cards) {
+  t.classList.add("rounded-3");
+}
+
+for (let t of profileImages) {
   t.classList.add("rounded-3");
 }
 

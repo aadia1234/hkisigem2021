@@ -43,7 +43,6 @@
   
     #text-content .link:hover {
       color: #b3c9f0;
-    
     }
   
     #text-content #profile_wrapper {
@@ -51,10 +50,11 @@
       display: grid;
       grid-template-columns: auto auto auto;
       align-content: center;
+      text-align: center;
     }
   
     #text-content #profile_wrapper .card {
-      margin-right: 20px;
+      /* margin-right: 20px; */
       border: 0 !important;
     }
   
@@ -65,7 +65,9 @@
     #text-content #profile_wrapper .member_card {
       background-color: white;
       margin-bottom: 40px;
-      /* text-align: center; */
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
   
     #text-content #profile_wrapper .member_card p {
@@ -118,8 +120,8 @@
         
         <h2 id="item-1">Primary PI</h2>
           <p> Huge thanks to Ms. Pain for helping our project along the way. </p>
-          <div id="profile_wrapper">
-            <div class="card shadow" style="width: 350px;">
+          <div id="profile_wrapper" style="display: block; margin-left: auto; margin-right: auto; width: fit-content">
+            <div class="card shadow" style="width: 350px; margin: auto;">
               <img src="../../static/media/images/T--HKIS--mspain.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Melissa Pain </h5>
@@ -130,17 +132,18 @@
 
         <h2 id="item-2">Instructor</h2>
           <p>Thank you Kenneth for all the time and effort you have spent coaching us and sharing your insights. The hours you spent guiding us is extremely valuable to our team.</p>      
-          <div id="profile_wrapper">
-            <div class="card shadow" style="width: 350px;">
+          <div id="profile_wrapper" style="display: block; margin-left: auto; margin-right: auto; width: fit-content">
+            <div class="card shadow" style="width: 350px; margin: auto;">
               <img src="../../static/media/images/T--HKIS--kenny.jpeg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Kenneth Ng  </h5>
+                <h5 class="card-title">Kenneth Ng</h5>
                 <p class="card-text">Kenneth Ng has been on HKU iGEM team since 2018. Veteran in cloning, and creative biological systems.</p>
               </div>
             </div>
            </div>
 
            <h2 id="item-4">Team Members </h2>
+           <p></p>
            <div id="profile_wrapper">
         
             <div class="member_card shadow" style="width: 260px;">
