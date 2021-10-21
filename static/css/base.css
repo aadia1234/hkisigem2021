@@ -8,7 +8,7 @@
 #sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display: none; }
 #content { color: unset; background-color: #d9efff; font-size: 1.1vh; padding: 0; width: 100%; height: 100vh; margin: 0 !important; border: none; line-height: 1.5 !important;} /* change ul line height to nothing*/
 .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { padding: 0; margin: 0; line-height: 1.5 !important;}
-#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5, #bodyContent p { text-align: inherit; color: inherit; margin-bottom: 0; font-family: "Bitter"; padding: 0 !important; }
+#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5, #bodyContent p { text-align: inherit; color: inherit; margin-bottom: 0; font-family: "Bitter"; padding: 0; }
 #bodyContent a[href ^="https://"], .link-https { padding: 0; text-decoration: none; }
 #bodyContent li { margin-bottom: 0 !important; }
 #top_menu_under { height: 0px !important; }
