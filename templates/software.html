@@ -1,0 +1,145 @@
+{{ HKIS/base.html }}
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/bootstrap.min.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/base.css&action=raw&ctype=text/css">
+    <link type=text/css rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/css/content.css&action=raw&ctype=text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  </head>
+
+  <style>
+    #header h1 {
+      text-align: center !important;
+      background:
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://2021.igem.org/wiki/images/thumb/c/ce/T--HKIS--Software_Banner.jpg/800px-T--HKIS--Software_Banner.jpg");
+      background-size: cover;
+      width: 100%;
+      padding: 42.5vmin 0 42.5vmin 0 !important;
+      font-size: 10rem;
+      margin-top: -5vh;
+      color: white !important;
+    }
+  </style>
+
+  <div id="header">
+    <h1 class="black">Software</h1>
+  </div>
+
+  <div id="content-row" class="row">
+    <!-- class += d-none -->
+    <div id="sidebar-col" class="col shadow-sm">
+      <nav style="height: 100vh;" class="regular navbar sticky-top navbar-light bg-none flex-column align-items-stretch p-3">
+        <nav id="sidebar" class="nav nav-pills flex-column shadow rounded-3">
+          <h1 class="bold" style="text-align: center !important;">Page Overview</h1>
+          <br>
+          <a class="nav-link active" href="#item-1">Software</a>
+          <a class="nav-link" href="#sources">Sources</a>
+        </nav>
+      </nav>
+    </div>
+    <div id="text-content" class="col">
+      <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
+        <h2 id="item-1">Software</h2>
+        <h3>Antimicrobial Peptide In-silico Improvement</h3>
+          <p>Our team has successfully designed an antimicrobial peptide template-based improvement program that systematically outputs variations of a target peptide based on amphipathicity and charges with structure untouched.
+          </p>
+          <p>Specifically, we designed a program that outputs all near-optimal variations of an antimicrobial peptide sequence, provided that appropriate inputs are provided. The outputs of our software take into account amino acid properties and their correlating positions to generate near-optimal variations of the peptide.
+          </p>
+          <p>For peptides that possess a beta-sheet structure, vital structure positions and turning amino acid positions are required. After the input is made, each amino acid within the peptide is classified according to its properties and effect on its antimicrobial ability. The classification is then reordered to optimize the peptide based on an ideal alternating amphipathic sequence researched with great detail[1]. 
+          </p>
+          <p>	The output file, titled out.FASTA, will contain a high quantity of generated peptide sequences. These peptides are variants of the base peptide. Each variant will possess the indicated amount of residue mutations. Out.FASTA is designed to be used with the AxPEP sequence-based machine learning models, specifically with the RF-AmPEP30 model. This machine learning model can take massive quantities of peptide sequences and out each peptide’s predicted antimicrobial performance on an index. The AI also allows the user to sort based on their index, with the highest score being on top. By using our software in conjunction with the AxPEP model, users can easily make improved variances of their antimicrobial peptides. The machine learning model may be found <a href="https://app.cbbio.online/ampep/home">here</a>. The link to our software is <a href="https://github.com/igemsoftware2021/AMPImprovement">here</a>here.</p>
+        <div id="sources-div">
+          <h2 id="sources">Sources</h2>
+          <p class="thin">
+            <sup> [1]</sup>Peng Tan, Huiyang Fu, Xi Ma, Design, optimization, and nanotechnology of antimicrobial peptides: From exploration to applications, Nano Today, Volume 39, 2021, 101229, ISSN 1748-0132,
+            https://doi.org/10.1016/j.nantod.2021.101229.
+            <br>
+            Hskdigital.Com, 2021, https://www.hskdigital.com/executing-functions-through-computer-software/.
+          </p>
+        </div>  
+      </body>
+    </div>
+  </div>
+
+  <!-- Footer code derived from © 2021 Copyright: MDBootstrap.com -->
+  <footer class="text-center text-white" style="z-index: 999; background-color: #8f8f8f;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <h1 style="margin-top: 1.5vh !important;">Special Thanks to Our Sponsors!</h1>
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center mt-5 mb-5" style="width: 100%;">
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 10.5vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/a/ac/T--HKIS--new-england-biolabs.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="New England Biolabs"
+              />
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 19vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/2/2e/T--HKIS--twist.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Twist Bioscience"
+              />
+            </div>
+          </div>
+          <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+              style="width: 9.33vmax;"
+            >
+              <img
+                src="https://2021.igem.org/wiki/images/d/d0/T--HKIS--rtc.svg"
+                class="img-fluid w-100 shadow bg-white rounded"
+                alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+
+      <!-- Section: Form -->
+      <section>
+        <h3 class="contact">Contact Us</h3>
+        <h4 class="contact">igem.hshk@gmail.com</h3>
+      </section>
+      <!-- Section: Form -->
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://2021.igem.org/Team:HKIS">VibCheck-HKIS</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/bootstrap.bundle.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/jquery.min.js&action=raw&ctype=text/javascript"></script>
+  <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKIS/static/js/content.js&action=raw&ctype=text/javascript"></script>
+</html>

@@ -49,6 +49,7 @@
     <div id="text-content" class="col">
       <body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-method="auto" data-bs-offset="20" tabindex="0">
         <h2 id="item-1">Antimicrobial Peptide Improvement</h2>
+          <p>Our team utilized Machine Learning to improve an AMP to produce different variants. Make sure to check out the <a href="https://github.com/gam3boy1/AMPImprovement">github repository</a> and the <a href="https://2021.igem.org/Team:HKIS/Contribution">contribution page</a> for more details about the machine learning! We have also 3D printed an awesome incubator hardware that worked fantastically with super saturated sodium acetate heat packs. </p> 
           <p>
           Antimicrobial peptides (AMPs) are a special kind of peptide that is used as an innate immune defense mechanism for all forms of life, against invading bacteria, acting as a Host Defence Peptide (HDP). Many of them accomplish this purpose by disrupting the cellular membranes of the bacteria in question and thereby killing them. The shape of the AMP is directly related to its ability to perform its function, as it affects its binding affinity to its target. The most common varieties of AMPs found in nature that disrupt biological membranes have an α-helical structure, forming a coil-like shape. They are also amphipathic, meaning that they have both hydrophobic and hydrophilic regions, their amphipathicity is extremely important to their ability 
           </p>
@@ -62,7 +63,12 @@
           Antimicrobial peptides (AMPs) are a special kind of peptide used as an innate immune defense mechanism for all forms of life against invading bacteria. Many of them defend against invading bacteria by disrupting the cellular membranes of the bacteria in question and thereby killing them. The shape of the AMP is directly related to its ability to perform its function, as it affects its binding affinity to its target. The most common varieties of AMPs found in nature that accomplish this cellular purpose have either an α-helical structure, forming a coil-like shape, or a β-sheet structure, forming overlapping blanket structures. They are also amphipathic. Amphipathicity is incredibly important as antimicrobial peptides would not be able to kill bacteria without being able to permeate through the membrane.
           </p>
           <p>
-          Our Improved Part: <a href="http://parts.igem.org/Part:BBa_K4041000">http://parts.igem.org/Part:BBa_K4041000</a>
+            Our improved part is designed using our software model on our software page. By inputting the original sequence for Tachyplesin I, and inputting all the positions of the turning and structurally vital amino acids, the program outputted a file with many Tachyplesin variants. These variants, which are ideally optimized versions of the input peptide, are then passed as input into the AmPEP-30 Random Forest model. The outputs of this are then sorted based on the resultant in-silico prediction index. Below is an example of the AMP variances we selected, including the lowest and highest scoring peptide. The sequence we selected as our improved part is one of the highest scoring sequences on the AmPEP index.
+          </p>
+          <img src="https://2021.igem.org/wiki/images/6/66/T--HKIS--ImprovementHypoParts.png">
+          <p></p>
+          <p>
+          Our improved part can be found <a href=" http://parts.igem.org/Part:BBa_K4041000">here</a>.
           </p>  
         <div id="sources-div">
           <h2 id="Sources">Sources</h2>
@@ -93,12 +99,6 @@
                 class="img-fluid w-100 shadow bg-white rounded"
                 alt="New England Biolabs"
               />
-              <!-- <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a> -->
             </div>
           </div>
           <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
@@ -112,12 +112,6 @@
                 class="img-fluid w-100 shadow bg-white rounded"
                 alt="Twist Bioscience"
               />
-              <!-- <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a> -->
             </div>
           </div>
           <div style="width: fit-content;" class="col-lg-2 col-md-auto mb-4 mb-md-0">
@@ -131,12 +125,6 @@
                 class="img-fluid w-100 shadow bg-white rounded"
                 alt="Frederick Gardner Cottrell Foundation of Research Corporation Technologies"
               />
-              <!-- <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a> -->
             </div>
           </div>
         </div>
